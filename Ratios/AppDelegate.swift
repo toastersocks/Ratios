@@ -12,10 +12,17 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    lazy var coordinator: Coordinator = {
+        guard let navController = window?.rootViewController as? UINavigationController else { fatalError("Either couldn't load or couldn't cast initial view controller.") }
+        
+        return Coordinator(with: navController)
+    }()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        coordinator.start()
         return true
     }
 

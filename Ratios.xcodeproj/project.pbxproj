@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD13DBB4201D30B400515F22 /* RatioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD13DBB3201D30B400515F22 /* RatioViewController.swift */; };
+		DD13DBB7201D312300515F22 /* StrainsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD13DBB6201D312300515F22 /* StrainsViewController.swift */; };
+		DD13DBB9201D314100515F22 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD13DBB8201D314100515F22 /* ResultsViewController.swift */; };
+		DD13DBBB201D314D00515F22 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD13DBBA201D314D00515F22 /* HelpViewController.swift */; };
+		DD13DBBD201D318200515F22 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD13DBBC201D318200515F22 /* Coordinator.swift */; };
+		DD13DBBF201D39F900515F22 /* UIViewController+StoryboardInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD13DBBE201D39F700515F22 /* UIViewController+StoryboardInit.swift */; };
+		DD13DBC1202285FE00515F22 /* RatiosAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD13DBC0202285FE00515F22 /* RatiosAlgorithm.swift */; };
 		DDB5B465201A7C62001F5F47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB5B464201A7C62001F5F47 /* AppDelegate.swift */; };
 		DDB5B467201A7C62001F5F47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB5B466201A7C62001F5F47 /* ViewController.swift */; };
 		DDB5B46A201A7C62001F5F47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB5B468201A7C62001F5F47 /* Main.storyboard */; };
@@ -26,6 +33,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD13DBB3201D30B400515F22 /* RatioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatioViewController.swift; sourceTree = "<group>"; };
+		DD13DBB6201D312300515F22 /* StrainsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrainsViewController.swift; sourceTree = "<group>"; };
+		DD13DBB8201D314100515F22 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		DD13DBBA201D314D00515F22 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		DD13DBBC201D318200515F22 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		DD13DBBE201D39F700515F22 /* UIViewController+StoryboardInit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardInit.swift"; sourceTree = "<group>"; };
+		DD13DBC0202285FE00515F22 /* RatiosAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatiosAlgorithm.swift; sourceTree = "<group>"; };
 		DDB5B461201A7C62001F5F47 /* Ratios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ratios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB5B464201A7C62001F5F47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDB5B466201A7C62001F5F47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +70,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD13DBB5201D30C300515F22 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DD13DBB3201D30B400515F22 /* RatioViewController.swift */,
+				DD13DBB6201D312300515F22 /* StrainsViewController.swift */,
+				DD13DBB8201D314100515F22 /* ResultsViewController.swift */,
+				DD13DBBA201D314D00515F22 /* HelpViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		DDB5B458201A7C62001F5F47 = {
 			isa = PBXGroup;
 			children = (
@@ -77,12 +102,16 @@
 		DDB5B463201A7C62001F5F47 /* Ratios */ = {
 			isa = PBXGroup;
 			children = (
+				DD13DBBE201D39F700515F22 /* UIViewController+StoryboardInit.swift */,
 				DDB5B464201A7C62001F5F47 /* AppDelegate.swift */,
 				DDB5B466201A7C62001F5F47 /* ViewController.swift */,
 				DDB5B468201A7C62001F5F47 /* Main.storyboard */,
 				DDB5B46B201A7C62001F5F47 /* Assets.xcassets */,
 				DDB5B46D201A7C62001F5F47 /* LaunchScreen.storyboard */,
 				DDB5B470201A7C62001F5F47 /* Info.plist */,
+				DD13DBBC201D318200515F22 /* Coordinator.swift */,
+				DD13DBC0202285FE00515F22 /* RatiosAlgorithm.swift */,
+				DD13DBB5201D30C300515F22 /* View */,
 			);
 			path = Ratios;
 			sourceTree = "<group>";
@@ -199,8 +228,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD13DBC1202285FE00515F22 /* RatiosAlgorithm.swift in Sources */,
 				DDB5B467201A7C62001F5F47 /* ViewController.swift in Sources */,
+				DD13DBBB201D314D00515F22 /* HelpViewController.swift in Sources */,
+				DD13DBBF201D39F900515F22 /* UIViewController+StoryboardInit.swift in Sources */,
+				DD13DBB7201D312300515F22 /* StrainsViewController.swift in Sources */,
 				DDB5B465201A7C62001F5F47 /* AppDelegate.swift in Sources */,
+				DD13DBB9201D314100515F22 /* ResultsViewController.swift in Sources */,
+				DD13DBB4201D30B400515F22 /* RatioViewController.swift in Sources */,
+				DD13DBBD201D318200515F22 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +392,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NQ5FBJE8P8;
 				INFOPLIST_FILE = Ratios/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.toastersocks.Ratios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -371,6 +408,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NQ5FBJE8P8;
 				INFOPLIST_FILE = Ratios/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.toastersocks.Ratios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
