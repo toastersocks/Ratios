@@ -1,7 +1,6 @@
 //: Playground - noun: a place where people can play
 
 import Foundation
-import SpriteKit
 
 struct Strain {
     let thc: Double
@@ -27,7 +26,7 @@ struct Ratio: CustomStringConvertible {
     
     var reduced: Ratio {
         let gcd = greatestCommonDivisor(a: numerator, b: denominator)
-        return Ratio(numerator: ratio.numerator / gcd, denominator: ratio.denominator / gcd)
+        return Ratio(numerator: numerator / gcd, denominator: denominator / gcd)
     }
     
     private func greatestCommonDivisor(a: Int, b: Int) -> Int {
@@ -84,12 +83,32 @@ let m1 = cbdSlope
 let m2 = thcSlope
 let b1 = cbdYIntercept
 let b2 = thcYIntercept
-let thcFactor = desiredRatio.thc
-let cbdFactor = desiredRatio.cbd
-let xIntersection = (thcFactor * b2 - cbdFactor * b1) / (m1 - m2)
-let xIntersection2 = (thcStrain.thc - thcStrain.cbd) / ( ((cbdStrain.cbd - thcStrain.cbd) / Double((100 - 0))) + ((thcStrain.thc - cbdStrain.thc) / Double((100 - 0))) )
-let yInterception = thcSlope * xIntersection + thcYIntercept
-let yInterception2 = cbdSlope * xIntersection + cbdYIntercept
-let reducedRatio = Ratio(numerator: Int(100 - xIntersection), denominator: Int(xIntersection)).reduced
+let c = desiredRatio.cbd
+let t = desiredRatio.thc
+//let thcFactor = desiredRatio.thc
+//let cbdFactor = desiredRatio.cbd
+let factorAdjustedX = (t * b1 - c * b2) / (c * m2 - t * m1)
+let finalMixTHC = thcSlope * factorAdjustedX + thcYIntercept
+let finalMixCBD = cbdSlope * factorAdjustedX + cbdYIntercept
+//let xIntersection = (b2 - b1) / (m1 - m2)
+//let xIntersection2 = (thcStrain.thc - thcStrain.cbd) / ( ((cbdStrain.cbd - thcStrain.cbd) / Double((100 - 0))) + ((thcStrain.thc - cbdStrain.thc) / Double((100 - 0))) )
+//let yInterception = thcSlope * factorAdjustedX + thcYIntercept
+//let yInterception2 = cbdSlope * factorAdjustedX + cbdYIntercept
+let reducedRatio = Ratio(numerator: Int(100 - factorAdjustedX), denominator: Int(factorAdjustedX))
+let grams = 28.0
+//var finalRatio = Double(reducedRatio.numerator) / Double(reducedRatio.denominator)
+//let thcGrams: Double
+//let cbdGrams: Double
+/*
+if finalRatio > 1 {
+    finalRatio = Double(reducedRatio.denominator) / Double(reducedRatio.numerator)
+    thcGrams = finalRatio * grams
+    cbdGrams = (1.0 - finalRatio) * grams
 
-
+} else {
+    thcGrams = finalRatio * grams
+    cbdGrams = (1.0 - finalRatio) * grams
+}
+*/
+let finalCBDGrams = factorAdjustedX * 0.01 * grams
+let finalTHCGrams = grams - finalCBDGrams
