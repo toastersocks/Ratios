@@ -71,7 +71,7 @@ struct RatiosAlgorithm {
     }
     
     
-    /// Calculates the percent of CBD strain needed to get the desired ratio of CBD & THC percentages in the final mix
+    /// The percent of CBD strain needed to get the desired ratio of CBD & THC percentages in the final mix
     ///
     /// - Returns: The percent of CBD strain which will be in the final mix
     func finalCBDMixPercentage() -> Double {
@@ -83,15 +83,19 @@ struct RatiosAlgorithm {
         return (desiredTHCFactor * b1 - desiredCBDFactor * b2) / (desiredCBDFactor * m2 - desiredTHCFactor * m1)
     }
     
-    /// Calculates the percent of THC strains needed to get the desired ratio of CBD & THC percentages in the final mix
+    /// The percent of THC strains needed to get the desired ratio of CBD & THC percentages in the final mix
     ///
     /// - Returns: The percent of THC strain which will be in the final mix
     func finalTHCMixRatio() -> Double {
         return 100.0 - finalCBDMixPercentage()
     }
     
+    
+    /// The ratio of THC & CBD strains in the final mix needed to create the desired ratio of cannabinoids
+    ///
+    /// - Returns: A Ratio with the ratio of THC strain as the numerator and CBD ratio as the denominator.
     func calculateRatio() -> Ratio {
         
-        return Ratio(numerator: Int(100 - finalCBDMixPercentage()), denominator: Int(finalCBDMixPercentage())).reduced
+        return Ratio(numerator: Int(finalTHCMixRatio()), denominator: Int(finalCBDMixPercentage())).reduced
     }
 }
