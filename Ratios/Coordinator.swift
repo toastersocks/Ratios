@@ -62,7 +62,6 @@ extension Coordinator: StrainsViewDelegate {
               let cbdStrainCBDPercentage = Double(state.cbdStrainCBDPercentage),
               let desiredTHCFactor = Double(ratioState.thcRatio),
               let desiredCBDFactor = Double(ratioState.cbdRatio)
-            // TODO: Validate user input
             else { fatalError("Invalid input not handled") }
         
         let thcStrain = Strain(thc: thcStrainTHCPercentage, cbd: thcStrainCBDPercentage)
@@ -93,7 +92,6 @@ extension Coordinator: StrainsViewDelegate {
         } else {
             guard let totalGramsString = ratioState.grams,
                   let totalGrams = Double(totalGramsString)
-                // TODO: Validate user input
                 else { fatalError("Invalid user input not handled (not validated)") }
             
             
