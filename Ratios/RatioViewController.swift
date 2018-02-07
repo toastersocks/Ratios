@@ -24,6 +24,7 @@ class RatioViewController: UIViewController, StoryboardInitializable {
     }
     
     weak var delegate: RatioViewDelegate?
+    weak var textFieldDelegate: DecimalNumberValidator?
     
     struct State {
         var thcRatio: String = ""
@@ -35,8 +36,9 @@ class RatioViewController: UIViewController, StoryboardInitializable {
     override func viewDidLoad() {
         super.viewDidLoad()
         nextButton.isEnabled = false
-
-        // Do any additional setup after loading the view.
+        desiredTHCRatioField.delegate = textFieldDelegate
+        desiredCBDRatioField.delegate = textFieldDelegate
+        gramsField.delegate = textFieldDelegate
     }
 
     override func didReceiveMemoryWarning() {

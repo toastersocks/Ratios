@@ -26,6 +26,7 @@ class StrainsViewController: UIViewController, StoryboardInitializable {
     }
     
     weak var delegate: StrainsViewDelegate?
+    weak var textFieldDelegate: DecimalNumberValidator?
     
     struct State {
         var thcStrainTHCPercentage: String = ""
@@ -38,7 +39,11 @@ class StrainsViewController: UIViewController, StoryboardInitializable {
         super.viewDidLoad()
         
         nextButton.isEnabled = false
-
+        
+        thcStrainTHCPercentageField.delegate = textFieldDelegate
+        thcStrainCBDPercentageField.delegate = textFieldDelegate
+        cbdStrainTHCPercentageField.delegate = textFieldDelegate
+        cbdStrainCBDPercentageField.delegate = textFieldDelegate
         // Do any additional setup after loading the view.
     }
 

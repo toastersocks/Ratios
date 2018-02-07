@@ -27,6 +27,7 @@ final class Coordinator {
     var ratioState: RatioViewController.State = RatioViewController.State()
     
     var navigationController: UINavigationController
+    let validator = DecimalNumberValidator()
     
     init(with navController: UINavigationController) {
         self.navigationController = navController
@@ -36,6 +37,7 @@ final class Coordinator {
         navigationController.setViewControllers([UIViewController](), animated: false)
         let ratioVC = RatioViewController.instantiate()
         ratioVC.delegate = self
+        ratioVC.textFieldDelegate = validator
         navigationController.pushViewController(ratioVC, animated: true)
     }
     
@@ -47,6 +49,7 @@ extension Coordinator: RatioViewDelegate {
         ratioState = state
         let strainsVC = StrainsViewController.instantiate()
         strainsVC.delegate = self
+        strainsVC.textFieldDelegate = validator
         navigationController.pushViewController(strainsVC, animated: true)
     }
 }
