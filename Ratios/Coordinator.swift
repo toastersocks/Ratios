@@ -25,7 +25,6 @@ protocol ResultsViewDelegate: class {
 final class Coordinator {
     
     var ratioState: RatioViewController.State = RatioViewController.State()
-    
     var navigationController: UINavigationController
     let validator = DecimalNumberValidator()
     
@@ -81,16 +80,16 @@ extension Coordinator: StrainsViewDelegate {
         var forMessage: String
         
         forMessage = """
-                        \(ratioState.thcRatio):\(ratioState.cbdRatio) thc to cbd
-                        \(cannabinoidPercentages.thc)% thc \(cannabinoidPercentages.cbd)% cbd
-                     """
+                    \(ratioState.thcRatio):\(ratioState.cbdRatio) thc to cbd
+                    \(String(format: "%.2f", cannabinoidPercentages.thc))% thc \(String(format: "%.2f", cannabinoidPercentages.cbd))% cbd
+                    """
         
         let mixMessage: String
         if ratioState.grams == nil || ratioState.grams!.isEmpty {
             mixMessage = """
-                            \(finalMix.numerator) parts of high thc strain
-                            \(finalMix.denominator) parts of high cbd strain
-                         """
+                        \(finalMix.numerator) parts of high thc strain
+                        \(finalMix.denominator) parts of high cbd strain
+                        """
         } else {
             guard let totalGramsString = ratioState.grams,
                   let totalGrams = Double(totalGramsString)
@@ -101,12 +100,12 @@ extension Coordinator: StrainsViewDelegate {
             let thcGrams = (100 - ratiosAlgorithm.finalCBDMixPercentage()) * 0.01 * totalGrams
             let cbdGrams = ratiosAlgorithm.finalCBDMixPercentage() * 0.01 * totalGrams
             
-            forMessage = "\(totalGramsString) grams of" + forMessage
+            forMessage = "\(totalGramsString) grams of " + forMessage
             
             mixMessage = """
-                            \(thcGrams) grams of thc strain
-                            \(cbdGrams) grams of cbd strain
-                         """
+                        \(String(format: "%.2f", thcGrams)) grams of thc strain
+                        \(String(format: "%.2f", cbdGrams)) grams of cbd strain
+                        """
         }
 
         let results = ResultsViewController.State(
