@@ -29,6 +29,6 @@ extension StoryboardInitializable where Self: UIViewController {
 }
 
  enum ViewControllerLoadingError: Error {
-    case CouldNotLoadViewControllerFromStoryboard
-    case CouldNotCastToTypeofSelf
+    case couldNotLoadViewControllerFromStoryboard
+    case couldNotCastToTypeofSelf
 }
