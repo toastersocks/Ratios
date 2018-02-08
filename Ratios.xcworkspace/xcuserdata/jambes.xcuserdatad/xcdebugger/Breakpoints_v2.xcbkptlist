@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ratios/StrainsViewController.swift"
-            timestampString = "539132264.214026"
+            timestampString = "539739933.265692"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ratios/StrainsViewController.swift"
-            timestampString = "539132264.2141401"
+            timestampString = "539739933.265794"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "textChanged(_:)"
             landmarkType = "7">
          </BreakpointContent>

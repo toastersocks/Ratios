@@ -25,8 +25,8 @@ protocol ResultsViewDelegate: class {
 final class Coordinator {
     
     var ratioState: RatioViewController.State = RatioViewController.State()
-    
     var navigationController: UINavigationController
+    let validator = DecimalNumberValidator()
     
     init(with navController: UINavigationController) {
         self.navigationController = navController
@@ -36,6 +36,7 @@ final class Coordinator {
         navigationController.setViewControllers([UIViewController](), animated: false)
         let ratioVC = RatioViewController.instantiate()
         ratioVC.delegate = self
+        ratioVC.textFieldDelegate = validator
         navigationController.pushViewController(ratioVC, animated: true)
     }
     
@@ -47,6 +48,7 @@ extension Coordinator: RatioViewDelegate {
         ratioState = state
         let strainsVC = StrainsViewController.instantiate()
         strainsVC.delegate = self
+        strainsVC.textFieldDelegate = validator
         navigationController.pushViewController(strainsVC, animated: true)
     }
 }
@@ -60,7 +62,6 @@ extension Coordinator: StrainsViewDelegate {
               let cbdStrainCBDPercentage = Double(state.cbdStrainCBDPercentage),
               let desiredTHCFactor = Double(ratioState.thcRatio),
               let desiredCBDFactor = Double(ratioState.cbdRatio)
-            // TODO: Validate user input
             else { fatalError("Invalid input not handled") }
         
         let thcStrain = Strain(thc: thcStrainTHCPercentage, cbd: thcStrainCBDPercentage)
@@ -75,35 +76,41 @@ extension Coordinator: StrainsViewDelegate {
         let finalMix = ratiosAlgorithm.calculateRatio()
         let cannabinoidPercentages = ratiosAlgorithm.cannabinoidPercentages(atCBDRatio: ratiosAlgorithm.finalCBDMixPercentage())
         
+        if ratiosAlgorithm.finalCBDMixPercentage() < 0 || ratiosAlgorithm.finalTHCMixPercentage() < 0 {
+            /// TODO: Make this message better/more user friendly/less wordy
+            let alert = UIAlertController(title: "Oops", message: "Your desired ratio can't be achieved using the strains you've entered. Make sure you entered the numbers correctly and/or try a different ratio or use different strains. Ratios works best using one CBD strain and one THC strain", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default))
+            navigationController.present(alert, animated: true)
+        }
+        
         var forMessage: String
         
         forMessage = """
-                        \(ratioState.thcRatio):\(ratioState.cbdRatio) thc to cbd
-                        \(cannabinoidPercentages.thc)% thc \(cannabinoidPercentages.cbd)% cbd
-                     """
+                    \(ratioState.thcRatio):\(ratioState.cbdRatio) thc to cbd
+                    \(String(format: "%.2f", cannabinoidPercentages.thc))% thc \(String(format: "%.2f", cannabinoidPercentages.cbd))% cbd
+                    """
         
         let mixMessage: String
         if ratioState.grams == nil || ratioState.grams!.isEmpty {
             mixMessage = """
-                            \(finalMix.numerator) parts of high thc strain
-                            \(finalMix.denominator) parts of high cbd strain
-                         """
+                        \(finalMix.numerator) parts of high thc strain
+                        \(finalMix.denominator) parts of high cbd strain
+                        """
         } else {
             guard let totalGramsString = ratioState.grams,
                   let totalGrams = Double(totalGramsString)
-                // TODO: Validate user input
                 else { fatalError("Invalid user input not handled (not validated)") }
             
             
-            let thcGrams = (100 - ratiosAlgorithm.finalCBDMixPercentage()) * 0.01 * totalGrams
+            let thcGrams = ratiosAlgorithm.finalTHCMixPercentage() * 0.01 * totalGrams
             let cbdGrams = ratiosAlgorithm.finalCBDMixPercentage() * 0.01 * totalGrams
             
-            forMessage = "\(totalGramsString) grams of" + forMessage
+            forMessage = "\(totalGramsString) grams of " + forMessage
             
             mixMessage = """
-                            \(thcGrams) grams of thc strain
-                            \(cbdGrams) grams of cbd strain
-                         """
+                        \(String(format: "%.2f", thcGrams)) grams of thc strain
+                        \(String(format: "%.2f", cbdGrams)) grams of cbd strain
+                        """
         }
 
         let results = ResultsViewController.State(

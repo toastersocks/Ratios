@@ -86,7 +86,7 @@ struct RatiosAlgorithm {
     /// The percent of THC strains needed to get the desired ratio of CBD & THC percentages in the final mix
     ///
     /// - Returns: The percent of THC strain which will be in the final mix
-    func finalTHCMixRatio() -> Double {
+    func finalTHCMixPercentage() -> Double {
         return 100.0 - finalCBDMixPercentage()
     }
     

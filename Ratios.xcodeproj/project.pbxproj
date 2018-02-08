@@ -20,6 +20,7 @@
 		DDB5B46C201A7C62001F5F47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDB5B46B201A7C62001F5F47 /* Assets.xcassets */; };
 		DDB5B46F201A7C62001F5F47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB5B46D201A7C62001F5F47 /* LaunchScreen.storyboard */; };
 		DDB5B47A201A7C62001F5F47 /* RatiosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB5B479201A7C62001F5F47 /* RatiosTests.swift */; };
+		DDBDFA61202BAD0C009913A7 /* DecimalNumberValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBDFA60202BAD0B009913A7 /* DecimalNumberValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		DDB5B475201A7C62001F5F47 /* RatiosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RatiosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB5B479201A7C62001F5F47 /* RatiosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatiosTests.swift; sourceTree = "<group>"; };
 		DDB5B47B201A7C62001F5F47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDBDFA60202BAD0B009913A7 /* DecimalNumberValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalNumberValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				DDB5B470201A7C62001F5F47 /* Info.plist */,
 				DD13DBBC201D318200515F22 /* Coordinator.swift */,
 				DD13DBC0202285FE00515F22 /* RatiosAlgorithm.swift */,
+				DDBDFA60202BAD0B009913A7 /* DecimalNumberValidator.swift */,
 				DD13DBB5201D30C300515F22 /* View */,
 			);
 			path = Ratios;
@@ -233,6 +236,7 @@
 				DD13DBBB201D314D00515F22 /* HelpViewController.swift in Sources */,
 				DD13DBBF201D39F900515F22 /* UIViewController+StoryboardInit.swift in Sources */,
 				DD13DBB7201D312300515F22 /* StrainsViewController.swift in Sources */,
+				DDBDFA61202BAD0C009913A7 /* DecimalNumberValidator.swift in Sources */,
 				DDB5B465201A7C62001F5F47 /* AppDelegate.swift in Sources */,
 				DD13DBB9201D314100515F22 /* ResultsViewController.swift in Sources */,
 				DD13DBB4201D30B400515F22 /* RatioViewController.swift in Sources */,
