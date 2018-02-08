@@ -95,7 +95,7 @@ extension Coordinator: StrainsViewDelegate {
                 else { fatalError("Invalid user input not handled (not validated)") }
             
             
-            let thcGrams = (100 - ratiosAlgorithm.finalCBDMixPercentage()) * 0.01 * totalGrams
+            let thcGrams = ratiosAlgorithm.finalTHCMixPercentage() * 0.01 * totalGrams
             let cbdGrams = ratiosAlgorithm.finalCBDMixPercentage() * 0.01 * totalGrams
             
             forMessage = "\(totalGramsString) grams of " + forMessage
