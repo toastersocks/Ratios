@@ -15,7 +15,6 @@
 		DD13DBBF201D39F900515F22 /* UIViewController+StoryboardInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD13DBBE201D39F700515F22 /* UIViewController+StoryboardInit.swift */; };
 		DD13DBC1202285FE00515F22 /* RatiosAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD13DBC0202285FE00515F22 /* RatiosAlgorithm.swift */; };
 		DDB5B465201A7C62001F5F47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB5B464201A7C62001F5F47 /* AppDelegate.swift */; };
-		DDB5B467201A7C62001F5F47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB5B466201A7C62001F5F47 /* ViewController.swift */; };
 		DDB5B46A201A7C62001F5F47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB5B468201A7C62001F5F47 /* Main.storyboard */; };
 		DDB5B46C201A7C62001F5F47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDB5B46B201A7C62001F5F47 /* Assets.xcassets */; };
 		DDB5B46F201A7C62001F5F47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB5B46D201A7C62001F5F47 /* LaunchScreen.storyboard */; };
@@ -43,7 +42,6 @@
 		DD13DBC0202285FE00515F22 /* RatiosAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatiosAlgorithm.swift; sourceTree = "<group>"; };
 		DDB5B461201A7C62001F5F47 /* Ratios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ratios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB5B464201A7C62001F5F47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DDB5B466201A7C62001F5F47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DDB5B469201A7C62001F5F47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DDB5B46B201A7C62001F5F47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDB5B46E201A7C62001F5F47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -106,7 +104,6 @@
 			children = (
 				DD13DBBE201D39F700515F22 /* UIViewController+StoryboardInit.swift */,
 				DDB5B464201A7C62001F5F47 /* AppDelegate.swift */,
-				DDB5B466201A7C62001F5F47 /* ViewController.swift */,
 				DDB5B468201A7C62001F5F47 /* Main.storyboard */,
 				DDB5B46B201A7C62001F5F47 /* Assets.xcassets */,
 				DDB5B46D201A7C62001F5F47 /* LaunchScreen.storyboard */,
@@ -232,7 +229,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD13DBC1202285FE00515F22 /* RatiosAlgorithm.swift in Sources */,
-				DDB5B467201A7C62001F5F47 /* ViewController.swift in Sources */,
 				DD13DBBB201D314D00515F22 /* HelpViewController.swift in Sources */,
 				DD13DBBF201D39F900515F22 /* UIViewController+StoryboardInit.swift in Sources */,
 				DD13DBB7201D312300515F22 /* StrainsViewController.swift in Sources */,
