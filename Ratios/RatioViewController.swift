@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
-class RatioViewController: UIViewController, StoryboardInitializable {
+class RatioViewController: UIViewController, StoryboardInitializable, GADBannerViewDelegate {
 
+    @IBOutlet weak var ratioBanner: GADBannerView!
     @IBOutlet weak var desiredTHCRatioField: UITextField!
     @IBOutlet weak var desiredCBDRatioField: UITextField!
     @IBOutlet weak var gramsField: UITextField!
@@ -39,6 +41,17 @@ class RatioViewController: UIViewController, StoryboardInitializable {
         desiredTHCRatioField.delegate = textFieldDelegate
         desiredCBDRatioField.delegate = textFieldDelegate
         gramsField.delegate = textFieldDelegate
+        
+        //Admob
+        //MARK:= google Adwords
+        // Test AdMob Banner ID
+        ratioBanner.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        
+        // Live AdMob Banner ID
+        //ratioBanner.adUnitID = "ca-app-pub-3940256099942544/6300978111"
+        ratioBanner.rootViewController = self
+        ratioBanner.load(GADRequest())
+
     }
 
     override func didReceiveMemoryWarning() {

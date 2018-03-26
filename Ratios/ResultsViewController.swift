@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
-class ResultsViewController: UIViewController, StoryboardInitializable {
-
+class ResultsViewController: UIViewController, StoryboardInitializable, GADBannerViewDelegate {
+    
+    
+    
+    @IBOutlet weak var resultsBanner: GADBannerView!
+    
     @IBOutlet weak var forMessageLabel: UILabel!
     @IBOutlet weak var mixMessageLabel: UILabel!
     
@@ -31,6 +36,16 @@ class ResultsViewController: UIViewController, StoryboardInitializable {
         super.viewDidLoad()
         forMessageLabel?.text = state.forMessage
         mixMessageLabel?.text = state.mixMessage
+        
+        //Admob
+        //MARK:= google Adwords
+        // Test AdMob Banner ID
+        resultsBanner.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        
+        // Live AdMob Banner ID
+        //resultsBanner.adUnitID = "ca-app-pub-3940256099942544/6300978111"
+        resultsBanner.rootViewController = self
+        resultsBanner.load(GADRequest())
     }
 
     override func didReceiveMemoryWarning() {

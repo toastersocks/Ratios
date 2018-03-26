@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
-class StrainsViewController: UIViewController, StoryboardInitializable {
-
+class StrainsViewController: UIViewController, StoryboardInitializable, GADBannerViewDelegate {
+    
+    
+    @IBOutlet weak var strainsBanner: GADBannerView!
+    
     @IBOutlet weak var thcStrainTHCPercentageField: UITextField!
     @IBOutlet weak var thcStrainCBDPercentageField: UITextField!
     @IBOutlet weak var cbdStrainTHCPercentageField: UITextField!
@@ -45,6 +49,16 @@ class StrainsViewController: UIViewController, StoryboardInitializable {
         cbdStrainTHCPercentageField.delegate = textFieldDelegate
         cbdStrainCBDPercentageField.delegate = textFieldDelegate
         // Do any additional setup after loading the view.
+        
+        //Admob
+        //MARK:= google Adwords
+        // Test AdMob Banner ID
+        strainsBanner.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        
+        // Live AdMob Banner ID
+        //strainsBanner.adUnitID = "ca-app-pub-3940256099942544/6300978111"
+        strainsBanner.rootViewController = self
+        strainsBanner.load(GADRequest())
     }
 
     override func didReceiveMemoryWarning() {

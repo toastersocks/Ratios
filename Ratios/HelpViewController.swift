@@ -7,13 +7,27 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
-class HelpViewController: UIViewController, StoryboardInitializable {
-
+class HelpViewController: UIViewController, StoryboardInitializable, GADBannerViewDelegate {
+    
+    
+    @IBOutlet weak var helpBanner: GADBannerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        //Admob
+        //MARK:= google Adwords
+        // Test AdMob Banner ID
+        helpBanner.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        
+        // Live AdMob Banner ID
+        //helpBanner.adUnitID = "ca-app-pub-3940256099942544/6300978111"
+        helpBanner.rootViewController = self
+        helpBanner.load(GADRequest())
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,6 +36,7 @@ class HelpViewController: UIViewController, StoryboardInitializable {
     }
     
 
+    
     @IBAction func closeTapped() {
         dismiss(animated: true)
     }
