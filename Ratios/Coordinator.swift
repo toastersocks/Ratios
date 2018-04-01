@@ -33,7 +33,8 @@ final class Coordinator {
     }
     
     func start() {
-        guard let ratioVC = navigationController.topViewController as? RatioViewController else { fatalError("Could not get root view controller") }
+        let ratioVC = RatioViewController.instantiate()
+        navigationController.setViewControllers([ratioVC], animated: false)
         ratioVC.delegate = self
         ratioVC.textFieldDelegate = validator
     }
@@ -138,10 +139,6 @@ extension Coordinator: StrainsViewDelegate {
 extension Coordinator: ResultsViewDelegate {
     
     func newRatioTapped(with state: ResultsViewController.State) {
-        navigationController.popToRootViewController(animated: true)
-        guard let ratioVC = navigationController.topViewController as? RatioViewController else { fatalError("Could not get top view controller") }
-        ratioVC.state = RatioViewController.State(thcRatio: "", cbdRatio: "", grams: nil)
-        ratioVC.desiredTHCRatioField.becomeFirstResponder()
         start()
     }
 }
