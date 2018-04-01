@@ -67,8 +67,8 @@ struct RatiosAlgorithm {
     /// - Parameter cbdRatio: The ratio of CBD strain in the mix (between 0 and 100 percent)
     /// - Returns: Returns a Strain value with the percentages of THC and CBD in the mix
     func cannabinoidPercentages(atCBDRatio cbdRatio: Double) -> Strain {
-        let totalFinalTHCY =  thcSlope * Double(cbdRatio) + thcYIntercept
-        let totalFinalCBDY =  cbdSlope * Double(cbdRatio) + cbdYIntercept
+        let totalFinalTHCY =  thcSlope * cbdRatio + thcYIntercept
+        let totalFinalCBDY =  cbdSlope * cbdRatio + cbdYIntercept
         
         return Strain(thc: totalFinalTHCY, cbd: totalFinalCBDY)
     }
