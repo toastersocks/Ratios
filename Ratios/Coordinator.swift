@@ -56,7 +56,7 @@ extension Coordinator: StrainsViewDelegate {
     
     fileprivate func showErrorDialogue() {
         /// TODO: Make this message better/more user friendly/less wordy
-        let alert = UIAlertController(title: "Oops", message: "Your desired ratio can't be achieved using the strains you've entered. Make sure you entered the numbers correctly and/or try a different ratio or use different strains. Ratios works best using one CBD strain and one THC strain", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Oops", message: "Your desired ratio can't be achieved using the strains you've entered. Try a different ratio or use different strains. Ratios works best using one CBD strain and one THC strain", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default))
         navigationController.present(alert, animated: true)
     }
