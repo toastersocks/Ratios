@@ -36,6 +36,8 @@ struct Ratio: CustomStringConvertible {
 
 enum AlgorithmError: Error {
     case notANumber
+    case infinite
+    case resultOutOfBounds
 }
 
 /// Encapsulates the algorithms needed to calculate various properties pertaining to mixing strains of cannabis
@@ -85,11 +87,17 @@ struct RatiosAlgorithm {
         // (t * b1 - c * b2) / (c * m2 - t * m1)
         let result = (desiredTHCFactor * b1 - desiredCBDFactor * b2) / (desiredCBDFactor * m2 - desiredTHCFactor * m1)
         
-        if result.isNaN {
+        if (0...100).contains(result) {
+            return result
+          // errors
+        } else if result.isNaN {
             throw AlgorithmError.notANumber
+        } else if result.isInfinite {
+            throw AlgorithmError.infinite
+        } else {
+            throw AlgorithmError.resultOutOfBounds
         }
-        
-        return result
+
     }
     
     /// Calculates the percent of THC strains needed to get the desired ratio of CBD & THC percentages in the final mix
