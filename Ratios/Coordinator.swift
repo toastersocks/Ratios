@@ -85,10 +85,6 @@ extension Coordinator: StrainsViewDelegate {
             let finalMix = try ratiosAlgorithm.calculateRatio()
             let cannabinoidPercentages = try ratiosAlgorithm.cannabinoidPercentages(atCBDRatio: ratiosAlgorithm.finalCBDMixPercentage())
             
-            if try ratiosAlgorithm.finalCBDMixPercentage() < 0 || ratiosAlgorithm.finalTHCMixPercentage() < 0 {
-                showErrorDialogue()
-            }
-            
             var forMessage: String
             
             forMessage = """
