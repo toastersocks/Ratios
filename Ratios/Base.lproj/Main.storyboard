@@ -109,7 +109,6 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14b-eY-yaa">
                                 <rect key="frame" x="136.5" y="366" width="102" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="102" id="QMQ-PD-gtg"/>
                                     <constraint firstAttribute="height" constant="30" id="hGL-Nk-Hoi"/>
@@ -408,7 +407,6 @@ Use Ratios to help create test blends to find out which you prefer</string>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJN-ql-LtE">
                                 <rect key="frame" x="136.5" y="393" width="102" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="102" id="M4F-Hr-peO"/>
                                     <constraint firstAttribute="height" constant="30" id="zT5-Xb-Dft"/>

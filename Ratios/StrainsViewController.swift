@@ -18,7 +18,13 @@ class StrainsViewController: DismissKeyboardViewController, StoryboardInitializa
     @IBOutlet weak var thcStrainCBDPercentageField: UITextField!
     @IBOutlet weak var cbdStrainTHCPercentageField: UITextField!
     @IBOutlet weak var cbdStrainCBDPercentageField: UITextField!
-    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton! {
+        didSet {
+            nextButton.setBackgroundColor(nextButton.tintColor, for: .normal)
+            nextButton.setBackgroundColor(nextButton.tintColor?.withAlphaComponent(0.25), for: .disabled)
+            nextButton.isEnabled = shouldNextButtonBeEnabled()
+        }
+    }
     
     var state = State(thcStrainTHCPercentage: "", thcStrainCBDPercentage: "", cbdStrainTHCPercentage: "", cbdStrainCBDPercentage: "") {
         didSet {
@@ -41,8 +47,6 @@ class StrainsViewController: DismissKeyboardViewController, StoryboardInitializa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        nextButton.isEnabled = false
         
         thcStrainTHCPercentageField.delegate = textFieldDelegate
         thcStrainCBDPercentageField.delegate = textFieldDelegate

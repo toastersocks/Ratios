@@ -15,7 +15,13 @@ class RatioViewController: DismissKeyboardViewController, StoryboardInitializabl
     @IBOutlet weak var desiredTHCRatioField: UITextField!
     @IBOutlet weak var desiredCBDRatioField: UITextField!
     @IBOutlet weak var gramsField: UITextField!
-    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton! {
+        didSet {
+            nextButton.setBackgroundColor(nextButton.tintColor, for: .normal)
+            nextButton.setBackgroundColor(nextButton.tintColor?.withAlphaComponent(0.25), for: .disabled)
+            nextButton.isEnabled = shouldNextButtonBeEnabled()
+        }
+    }
     
     var state = State(thcRatio: "", cbdRatio: "", grams: nil) {
         didSet {
@@ -37,7 +43,6 @@ class RatioViewController: DismissKeyboardViewController, StoryboardInitializabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nextButton.isEnabled = false
         desiredTHCRatioField.delegate = textFieldDelegate
         desiredCBDRatioField.delegate = textFieldDelegate
         gramsField.delegate = textFieldDelegate
