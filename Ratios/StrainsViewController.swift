@@ -9,7 +9,7 @@
 import UIKit
 import GoogleMobileAds
 
-class StrainsViewController: UIViewController, StoryboardInitializable, GADBannerViewDelegate {
+class StrainsViewController: DismissKeyboardViewController, StoryboardInitializable, GADBannerViewDelegate {
     
     
     @IBOutlet weak var strainsBanner: GADBannerView!

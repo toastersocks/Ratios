@@ -9,7 +9,7 @@
 import UIKit
 import GoogleMobileAds
 
-class RatioViewController: UIViewController, StoryboardInitializable, GADBannerViewDelegate {
+class RatioViewController: DismissKeyboardViewController, StoryboardInitializable, GADBannerViewDelegate {
 
     @IBOutlet weak var ratioBanner: GADBannerView!
     @IBOutlet weak var desiredTHCRatioField: UITextField!
