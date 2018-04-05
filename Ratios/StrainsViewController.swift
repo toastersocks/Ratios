@@ -69,6 +69,13 @@ class StrainsViewController: DismissKeyboardViewController, StoryboardInitializa
     @IBAction func nextTapped() {
         delegate?.nextTapped(with: state)
     }
+    
+    private func shouldNextButtonBeEnabled() -> Bool {
+        return (!state.thcStrainTHCPercentage.isEmpty &&
+                !state.thcStrainCBDPercentage.isEmpty &&
+                !state.cbdStrainTHCPercentage.isEmpty &&
+                !state.cbdStrainCBDPercentage.isEmpty)
+    }
 
     @IBAction func textChanged(_ sender: Any) {
         
@@ -78,12 +85,7 @@ class StrainsViewController: DismissKeyboardViewController, StoryboardInitializa
             cbdStrainTHCPercentage: cbdStrainTHCPercentageField.text ?? "",
             cbdStrainCBDPercentage: cbdStrainCBDPercentageField.text ?? "")
         
-        nextButton.isEnabled = (
-            !state.thcStrainTHCPercentage.isEmpty &&
-            !state.thcStrainCBDPercentage.isEmpty &&
-            !state.cbdStrainTHCPercentage.isEmpty &&
-            !state.cbdStrainCBDPercentage.isEmpty
-        )
+        nextButton.isEnabled = shouldNextButtonBeEnabled()
     }
     
     /*

@@ -63,6 +63,10 @@ class RatioViewController: DismissKeyboardViewController, StoryboardInitializabl
         delegate?.nextTapped(with: state)
     }
     
+    private func shouldNextButtonBeEnabled() -> Bool {
+        return !state.thcRatio.isEmpty && !state.cbdRatio.isEmpty
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -80,6 +84,6 @@ class RatioViewController: DismissKeyboardViewController, StoryboardInitializabl
             cbdRatio: desiredCBDRatioField.text ?? "",
             grams: gramsField.text)
         
-        nextButton.isEnabled = (!state.thcRatio.isEmpty && !state.cbdRatio.isEmpty)
+        nextButton.isEnabled = shouldNextButtonBeEnabled()
     }
 }
