@@ -375,6 +375,7 @@
 				DD13DBB9201D314100515F22 /* ResultsViewController.swift in Sources */,
 				DD13DBB4201D30B400515F22 /* RatioViewController.swift in Sources */,
 				DD13DBBD201D318200515F22 /* Coordinator.swift in Sources */,
+				DD645F422076DAB000AA830F /* DismissKeyboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,7 +532,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6SFM579B5E;
 				INFOPLIST_FILE = Ratios/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.toastersocks.Ratios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -548,7 +549,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6SFM579B5E;
 				INFOPLIST_FILE = Ratios/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.toastersocks.Ratios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
