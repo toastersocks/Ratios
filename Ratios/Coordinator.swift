@@ -20,6 +20,10 @@ protocol ResultsViewDelegate: class {
     func newRatioTapped(with state: ResultsViewController.State)
 }
 
+protocol OnboardingViewDelegate: class {
+    func challengeAnswered(answer: ChallengeAnswer)
+}
+
 
 /// Coordinates views and responds to user actions
 final class Coordinator {
@@ -33,10 +37,19 @@ final class Coordinator {
     }
     
     func start() {
-        let ratioVC = RatioViewController.instantiate()
-        navigationController.setViewControllers([ratioVC], animated: false)
-        ratioVC.delegate = self
-        ratioVC.textFieldDelegate = validator
+        
+        switch ChallengeAnswer(rawValue: UserDefaults().integer(forKey: "challengeAnswer")) {
+            
+            case .over21?:
+                let ratioVC = RatioViewController.instantiate()
+                ratioVC.delegate = self
+                ratioVC.textFieldDelegate = validator
+                navigationController.setViewControllers([ratioVC], animated: false)
+            case .minorOrUnanswered?, nil:
+                let onboardingVC = OnboardingViewController.instantiate()
+                onboardingVC.delegate = self
+                navigationController.setViewControllers([onboardingVC], animated: false)
+            }
     }
     
 }
@@ -49,6 +62,20 @@ extension Coordinator: RatioViewDelegate {
         strainsVC.delegate = self
         strainsVC.textFieldDelegate = validator
         navigationController.pushViewController(strainsVC, animated: true)
+    }
+}
+
+extension Coordinator: OnboardingViewDelegate {
+    func challengeAnswered(answer: ChallengeAnswer) {
+        switch answer {
+        case .minorOrUnanswered:
+            print("User is a minor")
+        case .over21:
+            UserDefaults().set(answer.rawValue, forKey: "challengeAnswer")
+            let ratiosVC = RatioViewController.instantiate()
+            ratiosVC.delegate = self
+            navigationController.setViewControllers([ratiosVC], animated: true)
+        }
     }
 }
 
