@@ -32,3 +32,10 @@ extension UIButton {
         setBackgroundImage(color?.image, for: state)
     }
 }
+
+extension String {
+    func formatDecimalNumbersForAccessibility() -> String {
+        let typePattern = "([0-9])(\\\(Locale.current.decimalSeparator ?? "\\."))([0-9])"
+        return self.replacingOccurrences(of: typePattern, with: "$1 point $3", options: .regularExpression)
+    }
+}

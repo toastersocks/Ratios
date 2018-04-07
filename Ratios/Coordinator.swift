@@ -116,7 +116,9 @@ extension Coordinator: StrainsViewDelegate {
             
             let results = ResultsViewController.State(
                 forMessage: forMessage,
-                mixMessage: mixMessage)
+                mixMessage: mixMessage,
+                accessibleMixMessage: "Mix " + mixMessage.formatDecimalNumbersForAccessibility().replacingOccurrences(of: "\n", with: " with ") + ".",
+                accessibleForMessage: "For " + forMessage.formatDecimalNumbersForAccessibility().replacingOccurrences(of: ":", with: " to ").replacingOccurrences(of: "\n", with: ", ") + ".")
             
             
             let resultsVC = ResultsViewController.instantiate()

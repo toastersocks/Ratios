@@ -111,6 +111,7 @@
 				DD13DBB6201D312300515F22 /* StrainsViewController.swift */,
 				DD13DBB8201D314100515F22 /* ResultsViewController.swift */,
 				DD13DBBA201D314D00515F22 /* HelpViewController.swift */,
+				DD645F412076DAB000AA830F /* DismissKeyboardViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -144,6 +145,7 @@
 				DDB5B46B201A7C62001F5F47 /* Assets.xcassets */,
 				DDB5B46D201A7C62001F5F47 /* LaunchScreen.storyboard */,
 				DDB5B470201A7C62001F5F47 /* Info.plist */,
+				DDA3433A207594A500C3C153 /* Helpers.swift */,
 				DD13DBBC201D318200515F22 /* Coordinator.swift */,
 				DD13DBC0202285FE00515F22 /* RatiosAlgorithm.swift */,
 				DDBDFA60202BAD0B009913A7 /* DecimalNumberValidator.swift */,
@@ -366,6 +368,7 @@
 				DD13DBC1202285FE00515F22 /* RatiosAlgorithm.swift in Sources */,
 				DD13DBBB201D314D00515F22 /* HelpViewController.swift in Sources */,
 				DD13DBBF201D39F900515F22 /* UIViewController+StoryboardInit.swift in Sources */,
+				DDA3433B207594A500C3C153 /* Helpers.swift in Sources */,
 				DD13DBB7201D312300515F22 /* StrainsViewController.swift in Sources */,
 				DDBDFA61202BAD0C009913A7 /* DecimalNumberValidator.swift in Sources */,
 				DDB5B465201A7C62001F5F47 /* AppDelegate.swift in Sources */,

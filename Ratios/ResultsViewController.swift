@@ -15,13 +15,29 @@ class ResultsViewController: UIViewController, StoryboardInitializable, GADBanne
     
     @IBOutlet weak var resultsBanner: GADBannerView!
     
-    @IBOutlet weak var forMessageLabel: UILabel!
-    @IBOutlet weak var mixMessageLabel: UILabel!
+    @IBOutlet weak var forMessageLabel: UILabel! {
+        didSet {
+            setForMessageLabel()
+        }
+    }
+    private func setForMessageLabel() {
+        forMessageLabel?.text = state.forMessage
+        forMessageLabel?.accessibilityLabel = state.accessibleForMessage
+    }
+    @IBOutlet weak var mixMessageLabel: UILabel! {
+        didSet {
+            setMixMessageLabel()
+        }
+    }
+    private func setMixMessageLabel() {
+        mixMessageLabel?.text = state.mixMessage
+        mixMessageLabel?.accessibilityLabel = state.accessibleMixMessage
+    }
     
     var state = State(forMessage: "", mixMessage: "") {
         didSet {
-            forMessageLabel?.text = state.forMessage
-            mixMessageLabel?.text = state.mixMessage
+            setForMessageLabel()
+            setMixMessageLabel()
         }
     }
     
@@ -29,14 +45,20 @@ class ResultsViewController: UIViewController, StoryboardInitializable, GADBanne
     
     struct State {
         var forMessage: String
+        var accessibleForMessage: String? = nil
         var mixMessage: String
+        var accessibleMixMessage: String? = nil
+        
+        init(forMessage: String, mixMessage: String, accessibleMixMessage: String? = nil, accessibleForMessage: String? = nil) {
+            self.forMessage = forMessage
+            self.mixMessage = mixMessage
+            self.accessibleForMessage = accessibleForMessage
+            self.accessibleMixMessage = accessibleMixMessage
+        }
     }
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        forMessageLabel?.text = state.forMessage
-        mixMessageLabel?.text = state.mixMessage
-        
         //Admob
         //MARK:= google Adwords
         // Test AdMob Banner ID
