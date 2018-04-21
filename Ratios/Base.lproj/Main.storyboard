@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rVu-H9-ORW">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rVu-H9-ORW">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,72 +15,94 @@
             <objects>
                 <viewController title="PurgatoryVC" id="cZI-MS-t9y" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0XX-oW-bnF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You must be at least 21 years old to use this app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfZ-ze-MCS">
-                                <rect key="frame" x="104" y="186" width="166" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You must be at least 21 years old to use this app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfZ-ze-MCS">
+                                <rect key="frame" x="16" y="177" width="288" height="100.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DfZ-ze-MCS" firstAttribute="centerY" secondItem="0XX-oW-bnF" secondAttribute="centerY" multiplier="0.8" id="4Hm-qU-8Kc"/>
+                            <constraint firstItem="DfZ-ze-MCS" firstAttribute="centerX" secondItem="0XX-oW-bnF" secondAttribute="centerX" id="8sz-OX-xZ4"/>
+                            <constraint firstItem="DGe-NW-OFv" firstAttribute="trailing" secondItem="DfZ-ze-MCS" secondAttribute="trailing" constant="16" id="TDf-MK-LdA"/>
+                            <constraint firstItem="DfZ-ze-MCS" firstAttribute="leading" secondItem="DGe-NW-OFv" secondAttribute="leading" constant="16" id="tiL-WH-aPP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DGe-NW-OFv"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c3z-kb-QQv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2260" y="133"/>
+            <point key="canvasLocation" x="-2260" y="132.68365817091455"/>
         </scene>
         <!--OnboardingVC-->
         <scene sceneID="gSe-se-VCg">
             <objects>
                 <viewController storyboardIdentifier="OnboardingViewController" title="OnboardingVC" id="vel-SC-7e1" customClass="OnboardingViewController" customModule="Ratios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xbm-an-he3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAd-AG-ffV">
-                                <rect key="frame" x="85" y="318" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAd-AG-ffV">
+                                <rect key="frame" x="69.5" y="342.5" width="53" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="Qsg-8W-WBv"/>
+                                    <constraint firstAttribute="width" constant="53" id="vnc-84-4j3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <state key="normal" title="Yes"/>
                                 <connections>
                                     <action selector="answeredOver21" destination="vel-SC-7e1" eventType="touchUpInside" id="YSS-tE-b7g"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLi-io-SpB">
-                                <rect key="frame" x="253" y="318" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLi-io-SpB">
+                                <rect key="frame" x="202.5" y="342.5" width="43" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="43" id="ap4-CM-Kdx"/>
+                                    <constraint firstAttribute="height" constant="53" id="cca-a5-TrF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <state key="normal" title="No"/>
                                 <connections>
                                     <action selector="answeredMinor" destination="vel-SC-7e1" eventType="touchUpInside" id="9EL-Zm-WJQ"/>
                                     <segue destination="cZI-MS-t9y" kind="presentation" id="xpK-fx-FSr"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Are you 21 years of age or older?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPa-Dk-avh">
-                                <rect key="frame" x="136" y="115" width="103" height="161"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you 21 years of age or older?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPa-Dk-avh">
+                                <rect key="frame" x="30" y="165.5" width="260" height="67"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RAd-AG-ffV" firstAttribute="centerY" secondItem="Xbm-an-he3" secondAttribute="centerY" multiplier="1.3" id="0ZP-in-zDF"/>
+                            <constraint firstItem="LPa-Dk-avh" firstAttribute="centerY" secondItem="Xbm-an-he3" secondAttribute="centerY" multiplier="0.7" id="LQP-Hu-H2S"/>
+                            <constraint firstItem="LPa-Dk-avh" firstAttribute="centerX" secondItem="Xbm-an-he3" secondAttribute="centerX" id="NAJ-SD-Lnr"/>
+                            <constraint firstItem="RAd-AG-ffV" firstAttribute="centerX" secondItem="Xbm-an-he3" secondAttribute="centerX" multiplier="0.6" id="TAc-Ym-d7X"/>
+                            <constraint firstItem="GPH-iJ-VYo" firstAttribute="trailing" secondItem="LPa-Dk-avh" secondAttribute="trailing" constant="30" id="W5T-sO-Y84"/>
+                            <constraint firstItem="XLi-io-SpB" firstAttribute="centerX" secondItem="Xbm-an-he3" secondAttribute="centerX" multiplier="1.4" id="aYT-ds-F2b"/>
+                            <constraint firstItem="LPa-Dk-avh" firstAttribute="leading" secondItem="GPH-iJ-VYo" secondAttribute="leading" constant="30" id="wAM-ph-A8y"/>
+                            <constraint firstItem="XLi-io-SpB" firstAttribute="centerY" secondItem="Xbm-an-he3" secondAttribute="centerY" multiplier="1.3" id="zuS-N1-iyw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="GPH-iJ-VYo"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ipM-ah-jP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3247" y="133"/>
+            <point key="canvasLocation" x="-3247.1999999999998" y="132.68365817091455"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pcV-wa-Vl5">
             <objects>
                 <navigationController id="rVu-H9-ORW" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zug-ua-jhK">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -95,25 +118,25 @@
             <objects>
                 <viewController storyboardIdentifier="RatioViewController" id="BYZ-38-t0r" customClass="RatioViewController" customModule="Ratios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Za4-yU-ycE" customClass="GADBannerView">
-                                <rect key="frame" x="27.5" y="64" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" identifier="adBanner" label="Advertisement banner">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="dAx-uK-cXd"/>
-                                    <constraint firstAttribute="width" constant="320" id="gae-dr-adp"/>
+                                    <constraint firstAttribute="height" constant="50" id="Sbo-DK-EMR"/>
+                                    <constraint firstAttribute="width" constant="320" id="yHu-Lx-Iny"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q8g-3N-Iiy">
-                                <rect key="frame" x="21.5" y="122" width="333" height="128"/>
+                                <rect key="frame" x="21" y="126" width="278" height="116"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="thc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44d-Ao-xzc">
-                                        <rect key="frame" x="43" y="83" width="25" height="21"/>
+                                        <rect key="frame" x="43" y="74" width="25" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <bool key="isElement" value="NO"/>
@@ -123,7 +146,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bCg-im-SwV">
-                                        <rect key="frame" x="85" y="78" width="47" height="30"/>
+                                        <rect key="frame" x="85" y="69" width="47" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <accessibility key="accessibilityConfiguration" hint="What ratio of THC do you want?" identifier="desiredTHCTextField" label="Desired THC factor"/>
                                         <nil key="textColor"/>
@@ -135,7 +158,7 @@
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=": cbd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4O-j1-Egk">
-                                        <rect key="frame" x="146" y="83" width="39" height="21"/>
+                                        <rect key="frame" x="146" y="74" width="39" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <bool key="isElement" value="NO"/>
@@ -145,18 +168,18 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ratio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8D-bO-i9I">
-                                        <rect key="frame" x="20" y="49" width="48" height="21"/>
+                                        <rect key="frame" x="20" y="40" width="48" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uc4-ES-9Qw">
-                                        <rect key="frame" x="283" y="20" width="30" height="47"/>
+                                        <rect key="frame" x="228" y="13" width="30" height="30"/>
                                         <accessibility key="accessibilityConfiguration" hint="Opens the help screen." identifier="helpButton" label="Help"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="8hf-6U-X2T"/>
-                                            <constraint firstAttribute="height" constant="47" id="bjm-Ti-X8W"/>
+                                            <constraint firstAttribute="width" constant="30" id="CPj-0c-gyE"/>
+                                            <constraint firstAttribute="height" constant="30" id="QpL-aH-Y3e"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                         <state key="normal" title="?"/>
@@ -165,7 +188,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KzS-Am-VTj">
-                                        <rect key="frame" x="202" y="78" width="47" height="30"/>
+                                        <rect key="frame" x="202" y="69" width="47" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <accessibility key="accessibilityConfiguration" hint="To what ratio of CBD do you want?" identifier="desiredCBDTextField" label="Desired CBD factor"/>
                                         <nil key="textColor"/>
@@ -183,9 +206,9 @@
                                     <bool key="isElement" value="NO"/>
                                 </accessibility>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="8fw-bq-HUc"/>
-                                    <constraint firstAttribute="trailing" secondItem="uc4-ES-9Qw" secondAttribute="trailing" constant="20" id="EJI-MF-7vA"/>
-                                    <constraint firstItem="uc4-ES-9Qw" firstAttribute="top" secondItem="Q8g-3N-Iiy" secondAttribute="top" constant="20" id="mmG-Gf-1tz"/>
+                                    <constraint firstAttribute="height" constant="116" id="Boz-ly-p0k"/>
+                                    <constraint firstItem="uc4-ES-9Qw" firstAttribute="top" secondItem="Q8g-3N-Iiy" secondAttribute="top" constant="13" id="Kow-Ok-RDY"/>
+                                    <constraint firstAttribute="trailing" secondItem="uc4-ES-9Qw" secondAttribute="trailing" constant="20" id="fcc-3n-Uyd"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14b-eY-yaa">
@@ -203,25 +226,19 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0s8-gb-gFX">
-                                <rect key="frame" x="96.5" y="257" width="182" height="100"/>
+                                <rect key="frame" x="69" y="254" width="182" height="100"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight (optional)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jre-l6-RhW">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Weight (optional)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jre-l6-RhW">
                                         <rect key="frame" x="20" y="20" width="142" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="QEG-Cc-qpB"/>
-                                            <constraint firstAttribute="width" constant="142" id="pfy-2n-PQP"/>
-                                        </constraints>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RrU-Bb-ewh">
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RrU-Bb-ewh">
                                         <rect key="frame" x="109" y="50" width="47" height="30"/>
                                         <accessibility key="accessibilityConfiguration" hint="How much do you want to blend? This is optional." identifier="gramsTextField" label="Final grams (optional)"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="L0b-FN-5vd"/>
-                                            <constraint firstAttribute="width" constant="47" id="MEi-Kz-4Lm"/>
-                                        </constraints>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
@@ -230,8 +247,9 @@
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="tlT-sL-pt8"/>
                                         </connections>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="grams" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpZ-cR-hAQ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="grams" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpZ-cR-hAQ">
                                         <rect key="frame" x="43" y="55" width="48" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <bool key="isElement" value="NO"/>
                                         </accessibility>
@@ -246,36 +264,38 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="RrU-Bb-ewh" firstAttribute="top" secondItem="Jre-l6-RhW" secondAttribute="bottom" constant="9" id="3cb-jJ-uYb"/>
-                                    <constraint firstItem="RrU-Bb-ewh" firstAttribute="leading" secondItem="SpZ-cR-hAQ" secondAttribute="trailing" constant="18" id="7tx-77-CAJ"/>
-                                    <constraint firstAttribute="trailing" secondItem="RrU-Bb-ewh" secondAttribute="trailing" constant="26" id="Gjb-Zg-HX6"/>
-                                    <constraint firstItem="Jre-l6-RhW" firstAttribute="top" secondItem="0s8-gb-gFX" secondAttribute="top" constant="20" id="M3h-nc-LLy"/>
-                                    <constraint firstAttribute="trailing" secondItem="Jre-l6-RhW" secondAttribute="trailing" constant="20" id="WK6-w9-vqq"/>
-                                    <constraint firstAttribute="bottom" secondItem="RrU-Bb-ewh" secondAttribute="bottom" constant="20" id="WmV-fa-B67"/>
-                                    <constraint firstItem="Jre-l6-RhW" firstAttribute="leading" secondItem="0s8-gb-gFX" secondAttribute="leading" constant="20" id="YaX-g9-zwr"/>
-                                    <constraint firstItem="SpZ-cR-hAQ" firstAttribute="leading" secondItem="0s8-gb-gFX" secondAttribute="leading" constant="43" id="fqT-RH-L5m"/>
-                                    <constraint firstItem="RrU-Bb-ewh" firstAttribute="leading" secondItem="SpZ-cR-hAQ" secondAttribute="trailing" constant="18" id="fx3-zf-d1t"/>
-                                    <constraint firstAttribute="bottom" secondItem="SpZ-cR-hAQ" secondAttribute="bottom" constant="24" id="i1j-Rd-gEC"/>
+                                    <constraint firstAttribute="width" constant="182" id="4Mh-ad-MwO"/>
+                                    <constraint firstAttribute="height" constant="100" id="ByY-5V-yeJ"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14b-eY-yaa">
+                                <rect key="frame" x="85" y="366" width="150" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Tsc-Lv-Tab"/>
+                                    <constraint firstAttribute="height" constant="50" id="qpj-v6-e4o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="UnD-hI-In9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="14b-eY-yaa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4pJ-DZ-FTj"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q8g-3N-Iiy" secondAttribute="trailing" constant="20.5" id="9ND-bi-qdQ"/>
-                            <constraint firstItem="Q8g-3N-Iiy" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Za4-yU-ycE" secondAttribute="bottom" constant="8" id="bAG-Uu-4Yg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0s8-gb-gFX" secondAttribute="trailing" priority="250" constant="97" id="dJe-wA-wLd"/>
-                            <constraint firstItem="14b-eY-yaa" firstAttribute="top" secondItem="0s8-gb-gFX" secondAttribute="bottom" constant="9" id="gOp-r7-4ND"/>
-                            <constraint firstItem="Q8g-3N-Iiy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iWW-yG-8WZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="14b-eY-yaa" secondAttribute="bottom" priority="250" constant="271" id="l0A-Uo-taK"/>
-                            <constraint firstItem="Za4-yU-ycE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="l9q-Wt-m0P"/>
-                            <constraint firstItem="14b-eY-yaa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="136.5" id="oeB-ZC-URR"/>
-                            <constraint firstItem="0s8-gb-gFX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qv8-tM-ujt"/>
-                            <constraint firstItem="Q8g-3N-Iiy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21.5" id="sYa-VO-pB6"/>
-                            <constraint firstItem="0s8-gb-gFX" firstAttribute="top" secondItem="Q8g-3N-Iiy" secondAttribute="bottom" constant="7" id="u3s-De-SbI"/>
-                            <constraint firstItem="0s8-gb-gFX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="250" constant="96" id="ugc-uA-Xo2"/>
-                            <constraint firstItem="Za4-yU-ycE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vCq-fY-rkF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="14b-eY-yaa" secondAttribute="trailing" constant="136.5" id="vWW-XO-QdC"/>
+                            <constraint firstItem="0s8-gb-gFX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Am-qj-3lJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q8g-3N-Iiy" secondAttribute="trailing" constant="21" id="Cfz-Mm-t8r"/>
+                            <constraint firstItem="14b-eY-yaa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DGI-JF-edj"/>
+                            <constraint firstItem="0s8-gb-gFX" firstAttribute="top" secondItem="Q8g-3N-Iiy" secondAttribute="bottom" constant="12" id="JaX-81-NHq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="14b-eY-yaa" secondAttribute="bottom" priority="750" constant="152" id="KvN-IB-3Nw"/>
+                            <constraint firstItem="Za4-yU-ycE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pYY-5u-tUd"/>
+                            <constraint firstItem="Za4-yU-ycE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rRL-ep-4Wb"/>
+                            <constraint firstItem="Q8g-3N-Iiy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21" id="ulT-rN-X1Y"/>
+                            <constraint firstItem="Q8g-3N-Iiy" firstAttribute="top" relation="lessThanOrEqual" secondItem="Za4-yU-ycE" secondAttribute="bottom" constant="56" id="zIn-W7-AAu"/>
+                            <constraint firstItem="14b-eY-yaa" firstAttribute="top" secondItem="0s8-gb-gFX" secondAttribute="bottom" constant="12" id="zZ8-MG-erS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -297,11 +317,11 @@
             <objects>
                 <viewController storyboardIdentifier="HelpViewController" id="FCN-Cv-2h1" customClass="HelpViewController" customModule="Ratios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wi2-tB-Xoe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edt-ii-14a" customClass="GADBannerView">
-                                <rect key="frame" x="27.5" y="62" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="62" width="320" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" identifier="adBanner" label="Advertisement banner">
                                     <bool key="isElement" value="YES"/>
@@ -312,7 +332,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zyB-FQ-XlD">
-                                <rect key="frame" x="14" y="166" width="347" height="274"/>
+                                <rect key="frame" x="-13.5" y="166" width="347" height="274"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Anm-xU-TbJ">
                                         <rect key="frame" x="122" y="224" width="102" height="30"/>
@@ -373,14 +393,14 @@ Use Ratios to help create test blends to find out which you prefer</string>
             <objects>
                 <viewController storyboardIdentifier="StrainsViewController" id="jds-E1-RFQ" customClass="StrainsViewController" customModule="Ratios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mj2-l6-5XQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nHM-yJ-zuq">
-                                <rect key="frame" x="34.5" y="274" width="306" height="111"/>
+                                <rect key="frame" x="7" y="243" width="306" height="111"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="% cbd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3v-gc-0QC">
-                                        <rect key="frame" x="239" y="66" width="59" height="21"/>
+                                        <rect key="frame" x="239" y="66" width="48" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <bool key="isElement" value="NO"/>
@@ -408,7 +428,7 @@ Use Ratios to help create test blends to find out which you prefer</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="% thc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqL-Hb-It9">
-                                        <rect key="frame" x="81" y="66" width="49" height="21"/>
+                                        <rect key="frame" x="81" y="66" width="43" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <bool key="isElement" value="NO"/>
@@ -431,26 +451,26 @@ Use Ratios to help create test blends to find out which you prefer</string>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="306" id="ejp-4r-ePV"/>
-                                    <constraint firstAttribute="height" constant="111" id="q4q-5n-cCi"/>
+                                    <constraint firstAttribute="width" constant="306" id="YKf-JP-g8U"/>
+                                    <constraint firstAttribute="height" constant="111" id="hOe-r2-oDz"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cy3-bO-AZH" customClass="GADBannerView">
-                                <rect key="frame" x="27.5" y="64" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" identifier="adBanner" label="Advertisement banner">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="92b-Th-buJ"/>
-                                    <constraint firstAttribute="height" constant="50" id="RkL-ZR-dM0"/>
+                                    <constraint firstAttribute="height" constant="50" id="42f-a1-P3z"/>
+                                    <constraint firstAttribute="width" constant="320" id="AJl-sA-oOO"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H6d-gx-PHf">
-                                <rect key="frame" x="34.5" y="122" width="306" height="133"/>
+                                <rect key="frame" x="7" y="122" width="306" height="113"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ubo-10-Zkz">
-                                        <rect key="frame" x="256" y="20" width="30" height="30"/>
+                                        <rect key="frame" x="261" y="14" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <accessibility key="accessibilityConfiguration" hint="Opens the help screen." identifier="helpButton" label="Help"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="29"/>
@@ -460,7 +480,7 @@ Use Ratios to help create test blends to find out which you prefer</string>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WXu-M5-Iv8">
-                                        <rect key="frame" x="20" y="83" width="47" height="30"/>
+                                        <rect key="frame" x="20" y="65" width="47" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <accessibility key="accessibilityConfiguration" hint="What is the percent THC in the THC strain?" identifier="thcStrainTHCPercentageTextField" label="THC strain THC percentage"/>
                                         <nil key="textColor"/>
@@ -471,7 +491,7 @@ Use Ratios to help create test blends to find out which you prefer</string>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="% cbd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spc-eF-ySh">
-                                        <rect key="frame" x="239" y="88" width="59" height="21"/>
+                                        <rect key="frame" x="239" y="70" width="48" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <bool key="isElement" value="NO"/>
@@ -481,7 +501,7 @@ Use Ratios to help create test blends to find out which you prefer</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cyi-Tw-Mkc">
-                                        <rect key="frame" x="178" y="83" width="47" height="30"/>
+                                        <rect key="frame" x="178" y="65" width="47" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <accessibility key="accessibilityConfiguration" hint="What is the percent CBD in the THC strain?" identifier="thcStrainCBDPercentageTextField" label="CBD strain CBD percentage"/>
                                         <nil key="textColor"/>
@@ -492,14 +512,14 @@ Use Ratios to help create test blends to find out which you prefer</string>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="thc strain" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhC-xa-VgD">
-                                        <rect key="frame" x="20" y="46" width="78" height="21"/>
+                                        <rect key="frame" x="20" y="28" width="78" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="% thc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lk1-8l-7xm">
-                                        <rect key="frame" x="81" y="88" width="60" height="21"/>
+                                        <rect key="frame" x="81" y="70" width="43" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <bool key="isElement" value="NO"/>
@@ -511,17 +531,20 @@ Use Ratios to help create test blends to find out which you prefer</string>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="133" id="O4o-Sg-Yl8"/>
-                                    <constraint firstAttribute="width" constant="306" id="rrr-4V-aGx"/>
+                                    <constraint firstAttribute="height" constant="113" id="0aR-Ot-igu"/>
+                                    <constraint firstAttribute="width" constant="306" id="v3t-S9-XQa"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJN-ql-LtE">
                                 <rect key="frame" x="136.5" y="393" width="102" height="30"/>
                                 <accessibility key="accessibilityConfiguration" hint="Continues to the next screen." identifier="nextButton" label="Next"/>
+                                <rect key="frame" x="85" y="366" width="150" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="102" id="M4F-Hr-peO"/>
-                                    <constraint firstAttribute="height" constant="30" id="zT5-Xb-Dft"/>
+                                    <constraint firstAttribute="height" constant="50" id="SF1-HT-oHm"/>
+                                    <constraint firstAttribute="width" constant="150" id="gUU-85-0QS"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -532,17 +555,15 @@ Use Ratios to help create test blends to find out which you prefer</string>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="OJN-ql-LtE" firstAttribute="centerX" secondItem="mj2-l6-5XQ" secondAttribute="centerX" id="2UJ-7w-mGx"/>
-                            <constraint firstItem="nHM-yJ-zuq" firstAttribute="centerX" secondItem="mj2-l6-5XQ" secondAttribute="centerX" id="30K-GP-jXF"/>
-                            <constraint firstItem="cy3-bO-AZH" firstAttribute="centerX" secondItem="mj2-l6-5XQ" secondAttribute="centerX" id="41A-vS-tNV"/>
-                            <constraint firstItem="H6d-gx-PHf" firstAttribute="centerX" secondItem="mj2-l6-5XQ" secondAttribute="centerX" id="G1I-Ha-FaZ"/>
-                            <constraint firstItem="cy3-bO-AZH" firstAttribute="top" secondItem="Ldv-Hm-Gsl" secondAttribute="top" id="O0C-oy-Vdj"/>
-                            <constraint firstItem="H6d-gx-PHf" firstAttribute="centerX" secondItem="mj2-l6-5XQ" secondAttribute="centerX" id="Rg5-wx-1Or"/>
-                            <constraint firstItem="OJN-ql-LtE" firstAttribute="top" secondItem="nHM-yJ-zuq" secondAttribute="bottom" constant="8" id="akY-YJ-gQi"/>
-                            <constraint firstItem="nHM-yJ-zuq" firstAttribute="top" secondItem="H6d-gx-PHf" secondAttribute="bottom" constant="19" id="hj9-CB-q5N"/>
-                            <constraint firstItem="H6d-gx-PHf" firstAttribute="top" secondItem="cy3-bO-AZH" secondAttribute="bottom" constant="8" id="ikh-fc-GHm"/>
-                            <constraint firstItem="OJN-ql-LtE" firstAttribute="centerX" secondItem="mj2-l6-5XQ" secondAttribute="centerX" id="jQF-uV-XJ0"/>
-                            <constraint firstItem="nHM-yJ-zuq" firstAttribute="centerX" secondItem="mj2-l6-5XQ" secondAttribute="centerX" id="kgx-fE-tsc"/>
+                            <constraint firstItem="H6d-gx-PHf" firstAttribute="top" relation="lessThanOrEqual" secondItem="cy3-bO-AZH" secondAttribute="bottom" constant="56" id="ARc-Vd-tn7"/>
+                            <constraint firstItem="H6d-gx-PHf" firstAttribute="centerX" secondItem="mj2-l6-5XQ" secondAttribute="centerX" id="Lhi-jo-A9o"/>
+                            <constraint firstItem="OJN-ql-LtE" firstAttribute="centerX" secondItem="mj2-l6-5XQ" secondAttribute="centerX" id="NMJ-nM-Ihk"/>
+                            <constraint firstItem="nHM-yJ-zuq" firstAttribute="top" secondItem="H6d-gx-PHf" secondAttribute="bottom" constant="8" id="Oen-1L-QWM"/>
+                            <constraint firstItem="cy3-bO-AZH" firstAttribute="top" secondItem="Ldv-Hm-Gsl" secondAttribute="top" id="QBi-bT-Gl8"/>
+                            <constraint firstItem="OJN-ql-LtE" firstAttribute="top" secondItem="nHM-yJ-zuq" secondAttribute="bottom" constant="12" id="dfg-8G-HOa"/>
+                            <constraint firstItem="nHM-yJ-zuq" firstAttribute="centerX" secondItem="mj2-l6-5XQ" secondAttribute="centerX" id="jnq-dP-mtI"/>
+                            <constraint firstItem="cy3-bO-AZH" firstAttribute="centerX" secondItem="mj2-l6-5XQ" secondAttribute="centerX" id="ohP-F0-P9i"/>
+                            <constraint firstItem="Ldv-Hm-Gsl" firstAttribute="bottom" secondItem="OJN-ql-LtE" secondAttribute="bottom" priority="750" constant="152" id="wQE-Cp-eqR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ldv-Hm-Gsl"/>
                     </view>
@@ -558,18 +579,18 @@ Use Ratios to help create test blends to find out which you prefer</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Few-f8-axq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="824.79999999999995" y="132.68365817091455"/>
+            <point key="canvasLocation" x="825" y="132.04225352112675"/>
         </scene>
         <!--Results View Controller-->
         <scene sceneID="PUt-cr-PCL">
             <objects>
                 <viewController storyboardIdentifier="ResultsViewController" id="PMF-p4-zdM" customClass="ResultsViewController" customModule="Ratios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0IF-1d-C5K">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GOv-jK-TPr">
-                                <rect key="frame" x="52" y="122" width="271" height="146"/>
+                                <rect key="frame" x="24.5" y="122" width="271" height="146"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXo-yS-T7t">
                                         <rect key="frame" x="20" y="61" width="231" height="65"/>
@@ -604,12 +625,12 @@ Use Ratios to help create test blends to find out which you prefer</string>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="146" id="KyD-up-cpl"/>
-                                    <constraint firstAttribute="width" constant="271" id="RkV-GS-qY8"/>
+                                    <constraint firstAttribute="width" constant="271" id="WDU-cD-8s9"/>
+                                    <constraint firstAttribute="height" constant="146" id="cl1-aW-tM3"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ekJ-dp-6LZ">
-                                <rect key="frame" x="52" y="278" width="271" height="142"/>
+                                <rect key="frame" x="24.5" y="278" width="271" height="142"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mix:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2B-Ug-lIU">
                                         <rect key="frame" x="20" y="20" width="35" height="21"/>
@@ -634,28 +655,30 @@ Use Ratios to help create test blends to find out which you prefer</string>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="271" id="9xG-nW-Tso"/>
-                                    <constraint firstAttribute="height" constant="142" id="HbX-Oq-Fwz"/>
+                                    <constraint firstAttribute="height" constant="142" id="fyC-sB-0xu"/>
+                                    <constraint firstAttribute="width" constant="271" id="llO-OJ-qQr"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uoa-fB-Uzk" customClass="GADBannerView">
-                                <rect key="frame" x="27.5" y="64" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" identifier="adBanner" label="Advertisement banner">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="1i3-8U-4zF"/>
-                                    <constraint firstAttribute="width" constant="320" id="LXq-vg-ZfK"/>
+                                    <constraint firstAttribute="width" constant="320" id="3al-N3-6xh"/>
+                                    <constraint firstAttribute="height" constant="50" id="sxQ-E4-oYg"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EoO-jh-DzW">
-                                <rect key="frame" x="136.5" y="430" width="102" height="30"/>
+                                <rect key="frame" x="85" y="428" width="150" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" hint="Creates a new ratio." identifier="newRatioButton" label="New ratio"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="102" id="eKd-hf-PJ5"/>
+                                    <constraint firstAttribute="width" constant="150" id="PA7-xe-IBy"/>
+                                    <constraint firstAttribute="height" constant="50" id="xo2-q2-7D2"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="New Ratio">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -666,14 +689,16 @@ Use Ratios to help create test blends to find out which you prefer</string>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ekJ-dp-6LZ" firstAttribute="centerX" secondItem="0IF-1d-C5K" secondAttribute="centerX" id="6gj-17-dCe"/>
-                            <constraint firstItem="GOv-jK-TPr" firstAttribute="top" secondItem="Uoa-fB-Uzk" secondAttribute="bottom" constant="8" id="BVC-8V-BTO"/>
-                            <constraint firstItem="GOv-jK-TPr" firstAttribute="centerX" secondItem="0IF-1d-C5K" secondAttribute="centerX" id="DJ5-s1-KYq"/>
-                            <constraint firstItem="ekJ-dp-6LZ" firstAttribute="top" secondItem="GOv-jK-TPr" secondAttribute="bottom" constant="10" id="JTR-Tu-VVf"/>
-                            <constraint firstItem="EoO-jh-DzW" firstAttribute="top" secondItem="ekJ-dp-6LZ" secondAttribute="bottom" constant="10" id="YoZ-FC-WGO"/>
-                            <constraint firstItem="Uoa-fB-Uzk" firstAttribute="top" secondItem="fZA-WH-0OM" secondAttribute="top" id="ZFS-Go-CDy"/>
-                            <constraint firstItem="EoO-jh-DzW" firstAttribute="centerX" secondItem="0IF-1d-C5K" secondAttribute="centerX" id="gmq-aZ-20O"/>
-                            <constraint firstItem="Uoa-fB-Uzk" firstAttribute="centerX" secondItem="0IF-1d-C5K" secondAttribute="centerX" id="o6J-ZZ-9cA"/>
+                            <constraint firstItem="Uoa-fB-Uzk" firstAttribute="top" secondItem="fZA-WH-0OM" secondAttribute="top" id="1Sa-nI-Jlc"/>
+                            <constraint firstItem="ekJ-dp-6LZ" firstAttribute="top" secondItem="GOv-jK-TPr" secondAttribute="bottom" constant="10" id="8xS-n4-Ij2"/>
+                            <constraint firstItem="GOv-jK-TPr" firstAttribute="top" relation="lessThanOrEqual" secondItem="Uoa-fB-Uzk" secondAttribute="bottom" constant="56" id="9aG-KW-eT1"/>
+                            <constraint firstItem="EoO-jh-DzW" firstAttribute="centerX" secondItem="0IF-1d-C5K" secondAttribute="centerX" id="IGd-PT-pyh"/>
+                            <constraint firstItem="fZA-WH-0OM" firstAttribute="bottom" secondItem="EoO-jh-DzW" secondAttribute="bottom" priority="750" constant="90" id="QEO-56-MwD"/>
+                            <constraint firstItem="GOv-jK-TPr" firstAttribute="centerX" secondItem="0IF-1d-C5K" secondAttribute="centerX" id="gCA-O7-NIi"/>
+                            <constraint firstItem="ekJ-dp-6LZ" firstAttribute="centerX" secondItem="0IF-1d-C5K" secondAttribute="centerX" id="mdj-6b-jos"/>
+                            <constraint firstItem="EoO-jh-DzW" firstAttribute="top" secondItem="ekJ-dp-6LZ" secondAttribute="bottom" constant="8" id="rSt-CO-YeN"/>
+                            <constraint firstItem="EoO-jh-DzW" firstAttribute="centerX" secondItem="0IF-1d-C5K" secondAttribute="centerX" id="rjj-8w-Htw"/>
+                            <constraint firstItem="Uoa-fB-Uzk" firstAttribute="centerX" secondItem="0IF-1d-C5K" secondAttribute="centerX" id="xny-1N-UxG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fZA-WH-0OM"/>
                     </view>
