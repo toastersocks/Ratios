@@ -57,10 +57,10 @@ class StrainsViewController: DismissKeyboardViewController, StoryboardInitializa
         //Admob
         //MARK:= google Adwords
         // Test AdMob Banner ID
-        strainsBanner.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        //strainsBanner.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         
         // Live AdMob Banner ID
-        //strainsBanner.adUnitID = "ca-app-pub-3940256099942544/6300978111"
+        strainsBanner.adUnitID = "ca-app-pub-3940256099942544/6300978111"
         strainsBanner.rootViewController = self
         strainsBanner.load(GADRequest())
     }

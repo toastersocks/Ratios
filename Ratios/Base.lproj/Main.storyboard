@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -223,8 +224,8 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RrU-Bb-ewh">
                                         <rect key="frame" x="109" y="50" width="47" height="30"/>
-                                        <accessibility key="accessibilityConfiguration" hint="How much do you want to blend? This is optional." identifier="gramsTextField" label="Final grams (optional)"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <accessibility key="accessibilityConfiguration" hint="How much do you want to blend? This is optional." identifier="gramsTextField" label="Final grams (optional)"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
@@ -233,9 +234,8 @@
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="tlT-sL-pt8"/>
                                         </connections>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="grams" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpZ-cR-hAQ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="grams" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpZ-cR-hAQ">
                                         <rect key="frame" x="43" y="55" width="48" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <bool key="isElement" value="NO"/>
                                         </accessibility>
@@ -522,9 +522,8 @@ Use Ratios to help create test blends to find out which you prefer</string>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJN-ql-LtE">
-                                <rect key="frame" x="136.5" y="393" width="102" height="30"/>
-                                <accessibility key="accessibilityConfiguration" hint="Continues to the next screen." identifier="nextButton" label="Next"/>
                                 <rect key="frame" x="85" y="366" width="150" height="50"/>
+                                <accessibility key="accessibilityConfiguration" hint="Continues to the next screen." identifier="nextButton" label="Next"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="SF1-HT-oHm"/>
                                     <constraint firstAttribute="width" constant="150" id="gUU-85-0QS"/>
@@ -700,5 +699,6 @@ Use Ratios to help create test blends to find out which you prefer</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="mIn-Hr-vbk"/>
     </inferredMetricsTieBreakers>
 </document>

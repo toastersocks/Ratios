@@ -62,10 +62,10 @@ class ResultsViewController: UIViewController, StoryboardInitializable, GADBanne
         //Admob
         //MARK:= google Adwords
         // Test AdMob Banner ID
-        resultsBanner.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        //resultsBanner.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         
         // Live AdMob Banner ID
-        //resultsBanner.adUnitID = "ca-app-pub-3940256099942544/6300978111"
+        resultsBanner.adUnitID = "ca-app-pub-3940256099942544/6300978111"
         resultsBanner.rootViewController = self
         resultsBanner.load(GADRequest())
     }

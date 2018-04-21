@@ -50,10 +50,10 @@ class RatioViewController: DismissKeyboardViewController, StoryboardInitializabl
         //Admob
         //MARK:= google Adwords
         // Test AdMob Banner ID
-        ratioBanner.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        //ratioBanner.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         
         // Live AdMob Banner ID
-        //ratioBanner.adUnitID = "ca-app-pub-3940256099942544/6300978111"
+        ratioBanner.adUnitID = "ca-app-pub-3940256099942544/6300978111"
         ratioBanner.rootViewController = self
         ratioBanner.load(GADRequest())
 

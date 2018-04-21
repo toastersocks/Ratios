@@ -22,10 +22,10 @@ class HelpViewController: UIViewController, StoryboardInitializable, GADBannerVi
         //Admob
         //MARK:= google Adwords
         // Test AdMob Banner ID
-        helpBanner.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        //helpBanner.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         
         // Live AdMob Banner ID
-        //helpBanner.adUnitID = "ca-app-pub-3940256099942544/6300978111"
+        helpBanner.adUnitID = "ca-app-pub-3940256099942544/6300978111"
         helpBanner.rootViewController = self
         helpBanner.load(GADRequest())
     }
