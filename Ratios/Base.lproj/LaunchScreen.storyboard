@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MFR-Jq-Fna">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,16 +15,215 @@
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                    <view key="view" contentMode="scaleToFill" id="Kyt-Ap-ujP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mYs-a7-iz3">
+                                <rect key="frame" x="27.5" y="64" width="320" height="50"/>
+                                <accessibility key="accessibilityConfiguration" identifier="adBanner" label="Advertisement banner">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="XWi-Uz-cM7"/>
+                                    <constraint firstAttribute="height" constant="50" id="ywB-ox-llo"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sJi-oC-aJb">
+                                <rect key="frame" x="21" y="170" width="333" height="116"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yx-1a-Dve">
+                                        <rect key="frame" x="46" y="95" width="25" height="0.0"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="NO"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="GNn-b3-OcH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FRF-ax-Vv6">
+                                        <rect key="frame" x="85" y="69" width="47" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" hint="What ratio of THC do you want?" identifier="desiredTHCTextField" label="Desired THC factor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="47" id="ekK-38-6fj"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ip-l3-DEU">
+                                        <rect key="frame" x="147" y="95" width="39" height="0.0"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="NO"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="39" id="aAS-pO-NUT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ta-Dr-1Aa">
+                                        <rect key="frame" x="9.5" y="82" width="48" height="0.0"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="48" id="ZXd-b5-kdC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7p-Sx-u3E">
+                                        <rect key="frame" x="283" y="13" width="30" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Opens the help screen." identifier="helpButton" label="Help"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Skr-Ge-Fy5"/>
+                                            <constraint firstAttribute="width" constant="30" id="gOD-eY-7jO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bNd-9J-WL3">
+                                        <rect key="frame" x="201.5" y="69" width="47" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" hint="To what ratio of CBD do you want?" identifier="desiredCBDTextField" label="Desired CBD factor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="47" id="6aK-pc-deG"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" hint="How much THC to CBD do you want in the final mix?" label="Elements for specifying your desired ratio of THC to CBD">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="bNd-9J-WL3" secondAttribute="bottom" constant="17" id="0v4-se-X1c"/>
+                                    <constraint firstAttribute="trailing" secondItem="U7p-Sx-u3E" secondAttribute="trailing" constant="20" id="3Y9-ly-sgJ"/>
+                                    <constraint firstItem="1ip-l3-DEU" firstAttribute="centerX" secondItem="sJi-oC-aJb" secondAttribute="centerX" id="5wk-C0-A1g"/>
+                                    <constraint firstItem="4yx-1a-Dve" firstAttribute="top" secondItem="0ta-Dr-1Aa" secondAttribute="bottom" constant="13" id="Jzd-fy-zAK"/>
+                                    <constraint firstAttribute="bottom" secondItem="1ip-l3-DEU" secondAttribute="bottom" constant="21" id="Ki5-4I-Xvj"/>
+                                    <constraint firstItem="FRF-ax-Vv6" firstAttribute="centerX" secondItem="sJi-oC-aJb" secondAttribute="centerX" multiplier="0.65" id="Txr-WR-QWp"/>
+                                    <constraint firstItem="bNd-9J-WL3" firstAttribute="centerX" secondItem="sJi-oC-aJb" secondAttribute="centerX" multiplier="1.35" id="aw2-3t-83a"/>
+                                    <constraint firstItem="0ta-Dr-1Aa" firstAttribute="centerX" secondItem="sJi-oC-aJb" secondAttribute="centerX" multiplier="0.2" id="b8Y-wM-R5b"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="78" id="i2c-cL-QYP"/>
+                                    <constraint firstItem="4yx-1a-Dve" firstAttribute="centerX" secondItem="sJi-oC-aJb" secondAttribute="centerX" multiplier="0.35" id="i9R-Y1-Ngj"/>
+                                    <constraint firstAttribute="bottom" secondItem="4yx-1a-Dve" secondAttribute="bottom" constant="21" id="k7t-Py-ykZ"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="116" id="kdg-QE-pIH"/>
+                                    <constraint firstAttribute="bottom" secondItem="FRF-ax-Vv6" secondAttribute="bottom" constant="17" id="tge-Or-1Oi"/>
+                                    <constraint firstItem="U7p-Sx-u3E" firstAttribute="top" secondItem="sJi-oC-aJb" secondAttribute="top" constant="13" id="v9n-qe-c1N"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b2p-DG-G7C">
+                                <rect key="frame" x="96.5" y="298" width="182" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqS-cm-npA">
+                                        <rect key="frame" x="91" y="20" width="0.0" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="iFk-Ba-kyi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zau-I6-bh3">
+                                        <rect key="frame" x="104" y="50" width="47" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" hint="How much do you want to blend? This is optional." identifier="gramsTextField" label="Final grams (optional)"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="47" id="bOk-SE-XeT"/>
+                                            <constraint firstAttribute="height" constant="30" id="o2r-cc-tg4"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ms5-w0-LKi">
+                                        <rect key="frame" x="30.5" y="55" width="48" height="21"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="NO"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="48" id="ayZ-vl-vRt"/>
+                                            <constraint firstAttribute="height" constant="21" id="sww-jo-LoY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="67" id="6C0-kW-RKm"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="Elo-Uy-taD"/>
+                                    <constraint firstItem="zau-I6-bh3" firstAttribute="centerX" secondItem="b2p-DG-G7C" secondAttribute="centerX" multiplier="1.4" id="IML-hR-TPf"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="zau-I6-bh3" secondAttribute="bottom" constant="5" id="K9y-D9-Sqa"/>
+                                    <constraint firstItem="eqS-cm-npA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="b2p-DG-G7C" secondAttribute="top" constant="10" id="RkM-Ex-m31"/>
+                                    <constraint firstItem="ms5-w0-LKi" firstAttribute="top" secondItem="eqS-cm-npA" secondAttribute="bottom" constant="14" id="a6l-Uq-dZE"/>
+                                    <constraint firstItem="zau-I6-bh3" firstAttribute="top" relation="lessThanOrEqual" secondItem="eqS-cm-npA" secondAttribute="bottom" constant="9" id="bVw-nY-Lpo"/>
+                                    <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="zau-I6-bh3" secondAttribute="bottom" constant="20" id="cEH-7g-Vuf"/>
+                                    <constraint firstItem="eqS-cm-npA" firstAttribute="centerX" secondItem="b2p-DG-G7C" secondAttribute="centerX" id="h1n-Pt-6gr"/>
+                                    <constraint firstItem="zau-I6-bh3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="eqS-cm-npA" secondAttribute="bottom" constant="6" id="h38-Bf-WIK"/>
+                                    <constraint firstItem="ms5-w0-LKi" firstAttribute="centerX" secondItem="b2p-DG-G7C" secondAttribute="centerX" multiplier="0.6" id="oaw-rq-rEH"/>
+                                    <constraint firstAttribute="width" constant="182" id="oco-gh-Q8O"/>
+                                    <constraint firstItem="eqS-cm-npA" firstAttribute="top" relation="lessThanOrEqual" secondItem="b2p-DG-G7C" secondAttribute="top" constant="20" id="uJ6-Wc-2k1"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="la3-bQ-oMC">
+                                <rect key="frame" x="112.5" y="414" width="150" height="50"/>
+                                <color key="backgroundColor" red="0.154022783" green="0.55949801210000005" blue="1" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" hint="Continues to the next screen." identifier="nextButton" label="Next"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="OMn-ea-33Y"/>
+                                    <constraint firstAttribute="height" constant="50" id="f22-SH-JEH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="tintColor" red="0.15402278304100037" green="0.55949801206588745" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="b2p-DG-G7C" firstAttribute="top" relation="lessThanOrEqual" secondItem="sJi-oC-aJb" secondAttribute="bottom" constant="12" id="C1U-du-PpF"/>
+                            <constraint firstItem="sJi-oC-aJb" firstAttribute="top" relation="lessThanOrEqual" secondItem="mYs-a7-iz3" secondAttribute="bottom" constant="56" id="GfA-dw-RVB"/>
+                            <constraint firstItem="mYs-a7-iz3" firstAttribute="centerX" secondItem="Kyt-Ap-ujP" secondAttribute="centerX" id="NkW-I8-bP4"/>
+                            <constraint firstItem="c8X-nY-eOF" firstAttribute="trailing" secondItem="sJi-oC-aJb" secondAttribute="trailing" constant="21" id="VmT-Pw-lbc"/>
+                            <constraint firstItem="b2p-DG-G7C" firstAttribute="top" relation="greaterThanOrEqual" secondItem="sJi-oC-aJb" secondAttribute="bottom" constant="2" id="Whr-cP-Xs3"/>
+                            <constraint firstItem="la3-bQ-oMC" firstAttribute="top" secondItem="b2p-DG-G7C" secondAttribute="bottom" constant="16" id="c7G-me-O9b"/>
+                            <constraint firstItem="mYs-a7-iz3" firstAttribute="top" secondItem="c8X-nY-eOF" secondAttribute="top" id="fV8-5z-ebA"/>
+                            <constraint firstItem="sJi-oC-aJb" firstAttribute="leading" secondItem="c8X-nY-eOF" secondAttribute="leading" constant="21" id="hyl-oI-oZ1"/>
+                            <constraint firstItem="la3-bQ-oMC" firstAttribute="centerX" secondItem="Kyt-Ap-ujP" secondAttribute="centerX" id="mGh-Pf-Scu"/>
+                            <constraint firstItem="b2p-DG-G7C" firstAttribute="centerX" secondItem="Kyt-Ap-ujP" secondAttribute="centerX" id="pIX-Pt-mwN"/>
+                            <constraint firstItem="sJi-oC-aJb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="mYs-a7-iz3" secondAttribute="bottom" constant="2" id="uJ7-Ud-m5z"/>
+                            <constraint firstItem="c8X-nY-eOF" firstAttribute="bottom" secondItem="la3-bQ-oMC" secondAttribute="bottom" priority="750" constant="152" id="yHT-MY-Faj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="c8X-nY-eOF"/>
                     </view>
+                    <navigationItem key="navigationItem" id="sbC-0i-bPs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pS5-QZ-f7T">
+            <objects>
+                <navigationController id="MFR-Jq-Fna" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SH4-9Y-Btm">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="01J-lp-oVM" kind="relationship" relationship="rootViewController" id="tpU-i1-KHm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RVh-bi-gFP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-732" y="375"/>
         </scene>
     </scenes>
 </document>
