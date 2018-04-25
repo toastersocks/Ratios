@@ -293,7 +293,6 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14b-eY-yaa">
                                 <rect key="frame" x="112.66666666666669" y="438" width="150" height="50"/>
-                                <color key="backgroundColor" red="0.15282451920000001" green="0.55813984719999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" hint="Continues to the next screen." identifier="nextButton" label="Next"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="Tsc-Lv-Tab"/>
@@ -342,11 +341,11 @@
         <scene sceneID="fae-7B-fnh">
             <objects>
                 <viewController storyboardIdentifier="HelpViewController" id="FCN-Cv-2h1" customClass="HelpViewController" customModule="Ratios" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Wi2-tB-Xoe">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="Wi2-tB-Xoe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edt-ii-14a" customClass="GADBannerView">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="edt-ii-14a" customClass="GADBannerView">
                                 <rect key="frame" x="27.666666666666657" y="86" width="320" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" identifier="adBanner" label="Advertisement banner">
@@ -624,7 +623,6 @@ Use Ratios to help create test blends to find out which you prefer</string>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJN-ql-LtE">
                                 <rect key="frame" x="112.66666666666669" y="442" width="150" height="50"/>
-                                <color key="backgroundColor" red="0.15282451920000001" green="0.55813984719999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" hint="Continues to the next screen." identifier="nextButton" label="Next"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="SF1-HT-oHm"/>
