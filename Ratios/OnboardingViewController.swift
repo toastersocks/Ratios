@@ -19,8 +19,11 @@ class OnboardingViewController: UIViewController, StoryboardInitializable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
     }
     
     @IBAction func answeredMinor() {
@@ -28,6 +31,7 @@ class OnboardingViewController: UIViewController, StoryboardInitializable {
     }
     
     @IBAction func answeredOver21() {
+        navigationController?.isNavigationBarHidden = false
         delegate?.challengeAnswered(answer: .over21)
     }
 }
