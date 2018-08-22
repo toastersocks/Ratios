@@ -12,8 +12,10 @@ import GoogleMobileAds
 class RatioViewController: DismissKeyboardViewController, StoryboardInitializable, GADBannerViewDelegate {
 
     @IBOutlet weak var ratioBanner: GADBannerView!
-    @IBOutlet weak var desiredTHCRatioField: UITextField!
-    @IBOutlet weak var desiredCBDRatioField: UITextField!
+    @IBOutlet weak var substanceALabel: UITextField!
+    @IBOutlet weak var substanceBLabel: UITextField!
+    @IBOutlet weak var desiredARatioField: UITextField!
+    @IBOutlet weak var desiredBRatioField: UITextField!
     @IBOutlet weak var gramsField: UITextField!
     @IBOutlet weak var nextButton: UIButton! {
         didSet {
@@ -23,10 +25,12 @@ class RatioViewController: DismissKeyboardViewController, StoryboardInitializabl
         }
     }
     
-    var state = State(thcRatio: "", cbdRatio: "", grams: nil) {
+    var state = State() {
         didSet {
-            desiredTHCRatioField?.text = state.thcRatio
-            desiredCBDRatioField?.text = state.cbdRatio
+            desiredARatioField?.text = state.aRatio
+            desiredBRatioField?.text = state.bRatio
+            substanceALabel?.text = state.aLabel
+            substanceBLabel?.text = state.bLabel
             gramsField?.text = state.grams
         }
     }
@@ -35,16 +39,19 @@ class RatioViewController: DismissKeyboardViewController, StoryboardInitializabl
     weak var textFieldDelegate: DecimalNumberValidator?
     
     struct State {
-        var thcRatio: String = ""
-        var cbdRatio: String = ""
+        var aRatio: String = ""
+        var bRatio: String = ""
+        var aLabel: String = "A"
+        var bLabel: String = "B"
+        
         var grams: String?
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        desiredTHCRatioField.delegate = textFieldDelegate
-        desiredCBDRatioField.delegate = textFieldDelegate
+        desiredARatioField.delegate = textFieldDelegate
+        desiredBRatioField.delegate = textFieldDelegate
         gramsField.delegate = textFieldDelegate
         
         //Admob
@@ -71,7 +78,7 @@ class RatioViewController: DismissKeyboardViewController, StoryboardInitializabl
     }
     
     private func shouldNextButtonBeEnabled() -> Bool {
-        return !state.thcRatio.isEmpty && !state.cbdRatio.isEmpty
+        return !state.aRatio.isEmpty && !state.bRatio.isEmpty
     }
     
     /*
@@ -87,8 +94,10 @@ class RatioViewController: DismissKeyboardViewController, StoryboardInitializabl
     @IBAction func textFieldChanged(_ sender: UITextField) {
         
         state = State(
-            thcRatio: desiredTHCRatioField.text ?? "",
-            cbdRatio: desiredCBDRatioField.text ?? "",
+            aRatio: desiredARatioField.text ?? "",
+            bRatio: desiredBRatioField.text ?? "",
+            aLabel: substanceALabel.text ?? "A",
+            bLabel: substanceBLabel.text ?? "B",
             grams: gramsField.text)
         
         nextButton.isEnabled = shouldNextButtonBeEnabled()

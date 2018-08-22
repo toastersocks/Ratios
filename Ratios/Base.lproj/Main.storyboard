@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rVu-H9-ORW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rVu-H9-ORW">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -136,7 +135,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q8g-3N-Iiy">
                                 <rect key="frame" x="21" y="194" width="333" height="116"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="thc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44d-Ao-xzc">
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="A" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p6X-aS-Knp">
+                                        <rect key="frame" x="25" y="70" width="51" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="textFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="6Gz-vJ-oh1"/>
+                                        </connections>
+                                    </textField>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="thc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44d-Ao-xzc">
                                         <rect key="frame" x="45.666666666666671" y="74" width="25" height="21"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <bool key="isElement" value="NO"/>
@@ -149,7 +158,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bCg-im-SwV">
-                                        <rect key="frame" x="85" y="69" width="47" height="30"/>
+                                        <rect key="frame" x="84.666666666666671" y="69" width="47.000000000000014" height="30"/>
                                         <accessibility key="accessibilityConfiguration" hint="What ratio of THC do you want?" identifier="desiredTHCTextField" label="Desired THC factor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="47" id="2BL-xZ-Emp"/>
@@ -162,20 +171,30 @@
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="rhK-nU-xDv"/>
                                         </connections>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=": cbd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4O-j1-Egk">
-                                        <rect key="frame" x="147" y="74" width="39" height="21"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="B" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gyw-Tw-YE7">
+                                        <rect key="frame" x="147" y="69" width="51" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="textFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="QuK-13-9dN"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4O-j1-Egk">
+                                        <rect key="frame" x="136" y="74" width="7" height="21"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <bool key="isElement" value="NO"/>
                                         </accessibility>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="39" id="lEz-is-ZNK"/>
+                                            <constraint firstAttribute="width" constant="7" id="lEz-is-ZNK"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ratio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8D-bO-i9I">
-                                        <rect key="frame" x="9.6666666666666714" y="40" width="48" height="21"/>
+                                        <rect key="frame" x="9.3333333333333286" y="40" width="48" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="ewY-17-wBF"/>
                                         </constraints>
@@ -197,7 +216,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KzS-Am-VTj">
-                                        <rect key="frame" x="201.66666666666666" y="69" width="47" height="30"/>
+                                        <rect key="frame" x="201.33333333333334" y="69" width="47" height="30"/>
                                         <accessibility key="accessibilityConfiguration" hint="To what ratio of CBD do you want?" identifier="desiredCBDTextField" label="Desired CBD factor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="47" id="UjU-iE-cFL"/>
@@ -217,7 +236,7 @@
                                     <bool key="isElement" value="NO"/>
                                 </accessibility>
                                 <constraints>
-                                    <constraint firstItem="b4O-j1-Egk" firstAttribute="centerX" secondItem="Q8g-3N-Iiy" secondAttribute="centerX" id="1WC-jN-g1C"/>
+                                    <constraint firstItem="b4O-j1-Egk" firstAttribute="centerX" secondItem="Q8g-3N-Iiy" secondAttribute="centerX" constant="-27" id="1WC-jN-g1C"/>
                                     <constraint firstItem="KzS-Am-VTj" firstAttribute="centerX" secondItem="Q8g-3N-Iiy" secondAttribute="centerX" multiplier="1.35" id="1Xk-bU-ajt"/>
                                     <constraint firstAttribute="bottom" secondItem="b4O-j1-Egk" secondAttribute="bottom" constant="21" id="AlZ-aM-4dY"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="116" id="Boz-ly-p0k"/>
@@ -236,8 +255,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0s8-gb-gFX">
                                 <rect key="frame" x="96.666666666666686" y="322" width="182" height="100"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight (optional)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jre-l6-RhW">
-                                        <rect key="frame" x="20" y="20" width="142" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount (optional)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jre-l6-RhW">
+                                        <rect key="frame" x="16" y="20" width="150" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="1nk-Qo-uvo"/>
                                         </constraints>
@@ -246,7 +265,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RrU-Bb-ewh">
-                                        <rect key="frame" x="103.99999999999999" y="50" width="47.000000000000014" height="30"/>
+                                        <rect key="frame" x="103.66666666666667" y="50" width="47.000000000000014" height="30"/>
                                         <accessibility key="accessibilityConfiguration" hint="How much do you want to blend? This is optional." identifier="gramsTextField" label="Final grams (optional)"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="ecn-jc-ofc"/>
@@ -326,16 +345,18 @@
                     </view>
                     <navigationItem key="navigationItem" id="l7K-pC-n66"/>
                     <connections>
-                        <outlet property="desiredCBDRatioField" destination="KzS-Am-VTj" id="J9u-1f-ixf"/>
-                        <outlet property="desiredTHCRatioField" destination="bCg-im-SwV" id="BOL-kv-Lon"/>
+                        <outlet property="desiredARatioField" destination="bCg-im-SwV" id="BOL-kv-Lon"/>
+                        <outlet property="desiredBRatioField" destination="KzS-Am-VTj" id="J9u-1f-ixf"/>
                         <outlet property="gramsField" destination="RrU-Bb-ewh" id="kbz-SV-5xL"/>
                         <outlet property="nextButton" destination="14b-eY-yaa" id="Yce-Yn-Mhl"/>
                         <outlet property="ratioBanner" destination="Za4-yU-ycE" id="cKo-wv-ijH"/>
+                        <outlet property="substanceALabel" destination="p6X-aS-Knp" id="VuL-JX-Lz6"/>
+                        <outlet property="substanceBLabel" destination="Gyw-Tw-YE7" id="LK6-uK-K9Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-183.75" y="133.09859154929578"/>
+            <point key="canvasLocation" x="-184.80000000000001" y="133.00492610837438"/>
         </scene>
         <!--Help View Controller-->
         <scene sceneID="fae-7B-fnh">
@@ -346,7 +367,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edt-ii-14a" customClass="GADBannerView">
-                                <rect key="frame" x="28" y="44" width="320" height="50"/>
+                                <rect key="frame" x="27.666666666666657" y="44" width="320" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" identifier="adBanner" label="Advertisement banner">
                                     <bool key="isElement" value="YES"/>
@@ -425,8 +446,8 @@ Use Ratios to help create test blends to find out which you prefer</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nHM-yJ-zuq">
                                 <rect key="frame" x="34.666666666666657" y="315" width="306" height="111"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="% cbd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3v-gc-0QC">
-                                        <rect key="frame" x="236" y="66" width="48" height="21"/>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="% y" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3v-gc-0QC">
+                                        <rect key="frame" x="236" y="65.666666666666686" width="48" height="21"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <bool key="isElement" value="NO"/>
                                         </accessibility>
@@ -452,14 +473,14 @@ Use Ratios to help create test blends to find out which you prefer</string>
                                             <action selector="textChanged:" destination="jds-E1-RFQ" eventType="editingChanged" id="582-SQ-BZX"/>
                                         </connections>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cbd strain" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdI-HJ-Coq">
-                                        <rect key="frame" x="19.666666666666671" y="20" width="83" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdI-HJ-Coq">
+                                        <rect key="frame" x="55.000000000000007" y="20" width="11.999999999999993" height="21"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="% thc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqL-Hb-It9">
-                                        <rect key="frame" x="78" y="66" width="43" height="21"/>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="% x" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqL-Hb-It9">
+                                        <rect key="frame" x="77.666666666666657" y="65.666666666666686" width="43" height="21"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <bool key="isElement" value="NO"/>
                                         </accessibility>
@@ -483,6 +504,26 @@ Use Ratios to help create test blends to find out which you prefer</string>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                         <connections>
                                             <action selector="textChanged:" destination="jds-E1-RFQ" eventType="editingChanged" id="hab-uf-bL7"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="% X" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JN3-aD-dZB">
+                                        <rect key="frame" x="77" y="60" width="71" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="textChanged:" destination="jds-E1-RFQ" eventType="editingChanged" id="xTx-Yx-lCD"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="% Y" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2m7-AR-35d">
+                                        <rect key="frame" x="234" y="62" width="63" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="textChanged:" destination="jds-E1-RFQ" eventType="editingChanged" id="BhX-ek-zbl"/>
                                         </connections>
                                     </textField>
                                 </subviews>
@@ -548,8 +589,8 @@ Use Ratios to help create test blends to find out which you prefer</string>
                                             <action selector="textChanged:" destination="jds-E1-RFQ" eventType="editingChanged" id="euj-Oh-Z5O"/>
                                         </connections>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="% cbd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spc-eF-ySh">
-                                        <rect key="frame" x="236" y="70" width="48" height="21"/>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="% y" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spc-eF-ySh">
+                                        <rect key="frame" x="236" y="69.666666666666686" width="48" height="21"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <bool key="isElement" value="NO"/>
                                         </accessibility>
@@ -575,8 +616,8 @@ Use Ratios to help create test blends to find out which you prefer</string>
                                             <action selector="textChanged:" destination="jds-E1-RFQ" eventType="editingChanged" id="OOm-bc-ZmF"/>
                                         </connections>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="thc strain" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhC-xa-VgD">
-                                        <rect key="frame" x="22.333333333333336" y="28" width="78" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhC-xa-VgD">
+                                        <rect key="frame" x="22" y="28" width="78" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="78" id="4tQ-DY-pA7"/>
                                             <constraint firstAttribute="height" constant="21" id="jHU-KT-LtX"/>
@@ -585,8 +626,8 @@ Use Ratios to help create test blends to find out which you prefer</string>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="% thc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lk1-8l-7xm">
-                                        <rect key="frame" x="70.333333333333343" y="70" width="43" height="21"/>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="% x" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lk1-8l-7xm">
+                                        <rect key="frame" x="70" y="69.666666666666686" width="43" height="21"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <bool key="isElement" value="NO"/>
                                         </accessibility>
@@ -598,6 +639,26 @@ Use Ratios to help create test blends to find out which you prefer</string>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="% X" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fgf-vf-Dn8">
+                                        <rect key="frame" x="69" y="65" width="71" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="textChanged:" destination="jds-E1-RFQ" eventType="editingChanged" id="ikb-TC-YRx"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="% Y" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UIR-BG-1Ux">
+                                        <rect key="frame" x="235" y="65" width="63" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="textChanged:" destination="jds-E1-RFQ" eventType="editingChanged" id="qUQ-cq-gUV"/>
+                                        </connections>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -657,17 +718,23 @@ Use Ratios to help create test blends to find out which you prefer</string>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="cbdStrainCBDPercentageField" destination="EPC-U2-3cq" id="hbm-LX-MqU"/>
-                        <outlet property="cbdStrainTHCPercentageField" destination="oKc-0l-Haa" id="yHP-N3-Oy0"/>
+                        <outlet property="aSubstanceTitleLabel" destination="jhC-xa-VgD" id="P8G-dU-zAq"/>
+                        <outlet property="aSubstanceXLabelField" destination="fgf-vf-Dn8" id="bNl-jA-JJy"/>
+                        <outlet property="aSubstanceXPercentageField" destination="WXu-M5-Iv8" id="diP-ea-o0j"/>
+                        <outlet property="aSubstanceYLabelField" destination="UIR-BG-1Ux" id="HrZ-Gj-jah"/>
+                        <outlet property="aSubstanceYPercentageField" destination="Cyi-Tw-Mkc" id="CN4-jh-cAl"/>
+                        <outlet property="bSubstanceTitleLabel" destination="jdI-HJ-Coq" id="1Du-KC-msK"/>
+                        <outlet property="bSubstanceXLabelField" destination="JN3-aD-dZB" id="YCY-aH-PBc"/>
+                        <outlet property="bSubstanceXPercentageField" destination="oKc-0l-Haa" id="yHP-N3-Oy0"/>
+                        <outlet property="bSubstanceYLabelField" destination="2m7-AR-35d" id="P1h-Oj-v0J"/>
+                        <outlet property="bSubstanceYPercentageField" destination="EPC-U2-3cq" id="hbm-LX-MqU"/>
                         <outlet property="nextButton" destination="OJN-ql-LtE" id="sLX-Yw-VXr"/>
                         <outlet property="strainsBanner" destination="cy3-bO-AZH" id="yVz-8h-0F2"/>
-                        <outlet property="thcStrainCBDPercentageField" destination="Cyi-Tw-Mkc" id="CN4-jh-cAl"/>
-                        <outlet property="thcStrainTHCPercentageField" destination="WXu-M5-Iv8" id="diP-ea-o0j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Few-f8-axq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="825" y="132.04225352112675"/>
+            <point key="canvasLocation" x="824.79999999999995" y="131.52709359605913"/>
         </scene>
         <!--Results View Controller-->
         <scene sceneID="PUt-cr-PCL">
@@ -804,6 +871,6 @@ Use Ratios to help create test blends to find out which you prefer</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="KQL-tF-UaJ"/>
+        <segue reference="tYm-Tp-qSB"/>
     </inferredMetricsTieBreakers>
 </document>

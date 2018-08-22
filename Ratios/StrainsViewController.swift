@@ -14,10 +14,16 @@ class StrainsViewController: DismissKeyboardViewController, StoryboardInitializa
     
     @IBOutlet weak var strainsBanner: GADBannerView!
     
-    @IBOutlet weak var thcStrainTHCPercentageField: UITextField!
-    @IBOutlet weak var thcStrainCBDPercentageField: UITextField!
-    @IBOutlet weak var cbdStrainTHCPercentageField: UITextField!
-    @IBOutlet weak var cbdStrainCBDPercentageField: UITextField!
+    @IBOutlet weak var aSubstanceTitleLabel: UILabel!
+    @IBOutlet weak var bSubstanceTitleLabel: UILabel!
+    @IBOutlet weak var aSubstanceXPercentageField: UITextField!
+    @IBOutlet weak var aSubstanceYPercentageField: UITextField!
+    @IBOutlet weak var bSubstanceXPercentageField: UITextField!
+    @IBOutlet weak var bSubstanceYPercentageField: UITextField!
+    @IBOutlet weak var aSubstanceXLabelField: UITextField!
+    @IBOutlet weak var aSubstanceYLabelField: UITextField!
+    @IBOutlet weak var bSubstanceXLabelField: UITextField!
+    @IBOutlet weak var bSubstanceYLabelField: UITextField!
     @IBOutlet weak var nextButton: UIButton! {
         didSet {
             nextButton.setBackgroundColor(nextButton.tintColor, for: .normal)
@@ -26,12 +32,20 @@ class StrainsViewController: DismissKeyboardViewController, StoryboardInitializa
         }
     }
     
-    var state = State(thcStrainTHCPercentage: "", thcStrainCBDPercentage: "", cbdStrainTHCPercentage: "", cbdStrainCBDPercentage: "") {
+    var state = State() {
         didSet {
-            thcStrainTHCPercentageField?.text = state.thcStrainTHCPercentage
-            thcStrainCBDPercentageField?.text = state.thcStrainCBDPercentage
-            cbdStrainTHCPercentageField?.text = state.cbdStrainTHCPercentage
-            cbdStrainCBDPercentageField?.text = state.cbdStrainCBDPercentage
+            aSubstanceXPercentageField?.text = state.aSubstanceXPercentage
+            aSubstanceYPercentageField?.text = state.aSubstanceYPercentage
+            bSubstanceXPercentageField?.text = state.bSubstanceXPercentage
+            bSubstanceYPercentageField?.text = state.bSubstanceYPercentage
+            
+            aSubstanceTitleLabel?.text = state.aSubstanceTitle
+            bSubstanceTitleLabel?.text = state.bSubstanceTitle
+            
+            aSubstanceXLabelField?.text = state.aSubstanceXPercentageName
+            aSubstanceYLabelField?.text = state.aSubstanceYPercentageName
+            bSubstanceXLabelField?.text = state.bSubstanceXPercentageName
+            bSubstanceYLabelField?.text = state.bSubstanceYPercentageName
         }
     }
     
@@ -39,19 +53,27 @@ class StrainsViewController: DismissKeyboardViewController, StoryboardInitializa
     weak var textFieldDelegate: DecimalNumberValidator?
     
     struct State {
-        var thcStrainTHCPercentage: String = ""
-        var thcStrainCBDPercentage: String = ""
-        var cbdStrainTHCPercentage: String = ""
-        var cbdStrainCBDPercentage: String = ""
+        var aSubstanceXPercentage: String = ""
+        var aSubstanceYPercentage: String = ""
+        var bSubstanceXPercentage: String = ""
+        var bSubstanceYPercentage: String = ""
+        
+        var aSubstanceTitle: String = ""
+        var bSubstanceTitle: String = ""
+        
+        var aSubstanceXPercentageName: String = ""
+        var aSubstanceYPercentageName: String = ""
+        var bSubstanceXPercentageName: String = ""
+        var bSubstanceYPercentageName: String = ""
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        thcStrainTHCPercentageField.delegate = textFieldDelegate
-        thcStrainCBDPercentageField.delegate = textFieldDelegate
-        cbdStrainTHCPercentageField.delegate = textFieldDelegate
-        cbdStrainCBDPercentageField.delegate = textFieldDelegate
+        aSubstanceXPercentageField.delegate = textFieldDelegate
+        aSubstanceYPercentageField.delegate = textFieldDelegate
+        bSubstanceXPercentageField.delegate = textFieldDelegate
+        bSubstanceYPercentageField.delegate = textFieldDelegate
         // Do any additional setup after loading the view.
         
         //Admob
@@ -77,19 +99,26 @@ class StrainsViewController: DismissKeyboardViewController, StoryboardInitializa
     }
     
     private func shouldNextButtonBeEnabled() -> Bool {
-        return (!state.thcStrainTHCPercentage.isEmpty &&
-                !state.thcStrainCBDPercentage.isEmpty &&
-                !state.cbdStrainTHCPercentage.isEmpty &&
-                !state.cbdStrainCBDPercentage.isEmpty)
+        return (!state.aSubstanceXPercentage.isEmpty &&
+                !state.aSubstanceYPercentage.isEmpty &&
+                !state.bSubstanceXPercentage.isEmpty &&
+                !state.bSubstanceYPercentage.isEmpty)
     }
 
     @IBAction func textChanged(_ sender: Any) {
         
         state = State(
-            thcStrainTHCPercentage: thcStrainTHCPercentageField.text ?? "",
-            thcStrainCBDPercentage: thcStrainCBDPercentageField.text ?? "",
-            cbdStrainTHCPercentage: cbdStrainTHCPercentageField.text ?? "",
-            cbdStrainCBDPercentage: cbdStrainCBDPercentageField.text ?? "")
+            aSubstanceXPercentage: aSubstanceXPercentageField?.text ?? "",
+            aSubstanceYPercentage: aSubstanceYPercentageField?.text ?? "",
+            bSubstanceXPercentage: bSubstanceXPercentageField?.text ?? "",
+            bSubstanceYPercentage: bSubstanceYPercentageField?.text ?? "",
+            aSubstanceTitle: aSubstanceTitleLabel?.text ?? "",
+            bSubstanceTitle: bSubstanceTitleLabel?.text ?? "",
+            aSubstanceXPercentageName: aSubstanceXLabelField?.text ?? "",
+            aSubstanceYPercentageName: aSubstanceYLabelField?.text ?? "",
+            bSubstanceXPercentageName: bSubstanceXLabelField?.text ?? "",
+            bSubstanceYPercentageName: bSubstanceYLabelField?.text ?? ""
+        )
         
         nextButton.isEnabled = shouldNextButtonBeEnabled()
     }
@@ -103,5 +132,4 @@ class StrainsViewController: DismissKeyboardViewController, StoryboardInitializa
         // Pass the selected object to the new view controller.
     }
     */
-
 }
