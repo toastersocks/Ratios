@@ -20,9 +20,11 @@ protocol ResultsViewDelegate: class {
     func newRatioTapped(with state: ResultsViewController.State)
 }
 
+/*
 protocol OnboardingViewDelegate: class {
     func challengeAnswered(answer: ChallengeAnswer)
 }
+*/
 
 
 /// Coordinates views and responds to user actions
@@ -38,22 +40,23 @@ final class Coordinator {
     
     func start() {
         
-        switch ChallengeAnswer(rawValue: UserDefaults().integer(forKey: "challengeAnswer")) {
-            
-            case .over21?:
+//        switch ChallengeAnswer(rawValue: UserDefaults().integer(forKey: "challengeAnswer")) {
+        
+//            case .over21?:
                 let ratioVC = RatioViewController.instantiate()
                 ratioVC.delegate = self
                 ratioVC.textFieldDelegate = validator
                 navigationController.setViewControllers([ratioVC], animated: false)
-            case .minorOrUnanswered?, nil:
-                let onboardingVC = OnboardingViewController.instantiate()
-                onboardingVC.delegate = self
-                navigationController.setViewControllers([onboardingVC], animated: false)
-            }
+//            case .minorOrUnanswered?, nil:
+//                let onboardingVC = OnboardingViewController.instantiate()
+//                onboardingVC.delegate = self
+//                navigationController.setViewControllers([onboardingVC], animated: false)
+//            }
     }
     
 }
 
+// MARK: - RatioViewDelegate
 extension Coordinator: RatioViewDelegate {
     
     func nextTapped(with state: RatioViewController.State) {
@@ -65,6 +68,8 @@ extension Coordinator: RatioViewDelegate {
     }
 }
 
+
+/*
 extension Coordinator: OnboardingViewDelegate {
     func challengeAnswered(answer: ChallengeAnswer) {
         switch answer {
@@ -78,6 +83,7 @@ extension Coordinator: OnboardingViewDelegate {
         }
     }
 }
+*/
 
 extension Coordinator: StrainsViewDelegate {
     
@@ -88,12 +94,12 @@ extension Coordinator: StrainsViewDelegate {
     }
     
     func nextTapped(with state: StrainsViewController.State) {
-        guard let thcStrainTHCPercentage = Double(state.thcStrainTHCPercentage),
-            let thcStrainCBDPercentage = Double(state.thcStrainCBDPercentage),
-            let cbdStrainTHCPercentage = Double(state.cbdStrainTHCPercentage),
-            let cbdStrainCBDPercentage = Double(state.cbdStrainCBDPercentage),
-            let desiredTHCFactor = Double(ratioState.thcRatio),
-            let desiredCBDFactor = Double(ratioState.cbdRatio)
+        guard let thcStrainTHCPercentage = Double(state.aSubstanceXPercentage),
+            let thcStrainCBDPercentage = Double(state.aSubstanceYPercentage),
+            let cbdStrainTHCPercentage = Double(state.bSubstanceXPercentage),
+            let cbdStrainCBDPercentage = Double(state.bSubstanceYPercentage),
+            let desiredTHCFactor = Double(ratioState.aRatio),
+            let desiredCBDFactor = Double(ratioState.bRatio)
             else { fatalError("Invalid input not handled") }
         
         let thcStrain = Strain(thc: thcStrainTHCPercentage, cbd: thcStrainCBDPercentage)
@@ -114,7 +120,7 @@ extension Coordinator: StrainsViewDelegate {
             var forMessage: String
             
             forMessage = """
-            \(ratioState.thcRatio):\(ratioState.cbdRatio) thc to cbd
+            \(ratioState.aRatio):\(ratioState.bRatio) thc to cbd
             \(String(format: "%.2f", cannabinoidPercentages.thc))% thc \(String(format: "%.2f", cannabinoidPercentages.cbd))% cbd
             """
             

@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		1DAEB32762BDCBA0EDFB0ECC /* Pods_Ratios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F05D3C5BFE21A541CCD3D9D4 /* Pods_Ratios.framework */; };
 		2684E05C7FF0C2399AEBB33A /* Pods_RatiosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 676E19D1D3B1C1A75DAE088F /* Pods_RatiosTests.framework */; };
-		D08E8C9320793C8A0053A788 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08E8C9220793C8A0053A788 /* OnboardingViewController.swift */; };
 		D0FC0794208AD95F006C1A70 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0FC0793208AD95F006C1A70 /* MapKit.framework */; };
-		D0FC0796208AD9D7006C1A70 /* recreationalCannabis (1).geojson in Resources */ = {isa = PBXBuildFile; fileRef = D0FC0795208AD9D7006C1A70 /* recreationalCannabis (1).geojson */; };
 		DD13DBB4201D30B400515F22 /* RatioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD13DBB3201D30B400515F22 /* RatioViewController.swift */; };
 		DD13DBB7201D312300515F22 /* StrainsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD13DBB6201D312300515F22 /* StrainsViewController.swift */; };
 		DD13DBB9201D314100515F22 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD13DBB8201D314100515F22 /* ResultsViewController.swift */; };
@@ -46,7 +44,6 @@
 		6B460C5288D188F0047BB419 /* Pods-Ratios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ratios.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ratios/Pods-Ratios.release.xcconfig"; sourceTree = "<group>"; };
 		D08E8C9220793C8A0053A788 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		D0FC0793208AD95F006C1A70 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		D0FC0795208AD9D7006C1A70 /* recreationalCannabis (1).geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "recreationalCannabis (1).geojson"; sourceTree = "<group>"; };
 		D2FE9E17725D509E5F150C88 /* Pods-Ratios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ratios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ratios/Pods-Ratios.debug.xcconfig"; sourceTree = "<group>"; };
 		DD13DBB3201D30B400515F22 /* RatioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatioViewController.swift; sourceTree = "<group>"; };
 		DD13DBB6201D312300515F22 /* StrainsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrainsViewController.swift; sourceTree = "<group>"; };
@@ -148,7 +145,6 @@
 		DDB5B463201A7C62001F5F47 /* Ratios */ = {
 			isa = PBXGroup;
 			children = (
-				D0FC0795208AD9D7006C1A70 /* recreationalCannabis (1).geojson */,
 				DD13DBBE201D39F700515F22 /* UIViewController+StoryboardInit.swift */,
 				DDB5B464201A7C62001F5F47 /* AppDelegate.swift */,
 				DDB5B468201A7C62001F5F47 /* Main.storyboard */,
@@ -265,7 +261,6 @@
 			files = (
 				DDB5B46F201A7C62001F5F47 /* LaunchScreen.storyboard in Resources */,
 				DDB5B46C201A7C62001F5F47 /* Assets.xcassets in Resources */,
-				D0FC0796208AD9D7006C1A70 /* recreationalCannabis (1).geojson in Resources */,
 				DDB5B46A201A7C62001F5F47 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,7 +326,6 @@
 				DDBDFA61202BAD0C009913A7 /* DecimalNumberValidator.swift in Sources */,
 				DDB5B465201A7C62001F5F47 /* AppDelegate.swift in Sources */,
 				DD13DBB9201D314100515F22 /* ResultsViewController.swift in Sources */,
-				D08E8C9320793C8A0053A788 /* OnboardingViewController.swift in Sources */,
 				DD13DBB4201D30B400515F22 /* RatioViewController.swift in Sources */,
 				DD13DBBD201D318200515F22 /* Coordinator.swift in Sources */,
 				DD645F422076DAB000AA830F /* DismissKeyboardViewController.swift in Sources */,
@@ -493,11 +487,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6SFM579B5E;
+				DEVELOPMENT_TEAM = NQ5FBJE8P8;
 				INFOPLIST_FILE = Ratios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = design.rdconcepts.calc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.toastersocks.ratios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -510,11 +504,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6SFM579B5E;
+				DEVELOPMENT_TEAM = NQ5FBJE8P8;
 				INFOPLIST_FILE = Ratios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = design.rdconcepts.calc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.toastersocks.ratios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"SWIFT_ACTIVE_COMPILATION_CONDITIONS[arch=*]" = RELEASE;
 				SWIFT_VERSION = 4.0;
