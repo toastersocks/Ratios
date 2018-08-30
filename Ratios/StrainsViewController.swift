@@ -14,16 +14,44 @@ class StrainsViewController: DismissKeyboardViewController, StoryboardInitializa
     
     @IBOutlet weak var strainsBanner: GADBannerView!
     
-    @IBOutlet weak var aSubstanceTitleLabel: UILabel!
-    @IBOutlet weak var bSubstanceTitleLabel: UILabel!
+    @IBOutlet weak var aSubstanceTitleField: UITextField! {
+        didSet {
+            aSubstanceTitleField?.text = state.aSubstanceTitle
+        }
+    }
+    @IBOutlet weak var bSubstanceTitleField: UITextField! {
+        didSet {
+            bSubstanceTitleField?.text = state.bSubstanceTitle
+        }
+    }
     @IBOutlet weak var aSubstanceXPercentageField: UITextField!
     @IBOutlet weak var aSubstanceYPercentageField: UITextField!
     @IBOutlet weak var bSubstanceXPercentageField: UITextField!
     @IBOutlet weak var bSubstanceYPercentageField: UITextField!
-    @IBOutlet weak var aSubstanceXLabelField: UITextField!
-    @IBOutlet weak var aSubstanceYLabelField: UITextField!
-    @IBOutlet weak var bSubstanceXLabelField: UITextField!
-    @IBOutlet weak var bSubstanceYLabelField: UITextField!
+    @IBOutlet weak var aSubstanceXLabel: UILabel! {
+        didSet {
+            aSubstanceXLabel?.text = state.xPercentageName
+        }
+    }
+    
+    @IBOutlet weak var aSubstanceYLabel: UILabel! {
+        didSet {
+            aSubstanceYLabel?.text = state.yPercentageName
+        }
+    }
+    
+    @IBOutlet weak var bSubstanceXLabel: UILabel! {
+        didSet {
+            bSubstanceXLabel?.text = state.xPercentageName
+        }
+    }
+    
+    @IBOutlet weak var bSubstanceYLabel: UILabel! {
+        didSet {
+            bSubstanceYLabel?.text = state.yPercentageName
+        }
+    }
+    
     @IBOutlet weak var nextButton: UIButton! {
         didSet {
             nextButton.setBackgroundColor(nextButton.tintColor, for: .normal)
@@ -39,13 +67,13 @@ class StrainsViewController: DismissKeyboardViewController, StoryboardInitializa
             bSubstanceXPercentageField?.text = state.bSubstanceXPercentage
             bSubstanceYPercentageField?.text = state.bSubstanceYPercentage
             
-            aSubstanceTitleLabel?.text = state.aSubstanceTitle
-            bSubstanceTitleLabel?.text = state.bSubstanceTitle
+            aSubstanceTitleField?.text = state.aSubstanceTitle
+            bSubstanceTitleField?.text = state.bSubstanceTitle
             
-            aSubstanceXLabelField?.text = state.aSubstanceXPercentageName
-            aSubstanceYLabelField?.text = state.aSubstanceYPercentageName
-            bSubstanceXLabelField?.text = state.bSubstanceXPercentageName
-            bSubstanceYLabelField?.text = state.bSubstanceYPercentageName
+            aSubstanceXLabel?.text = state.xPercentageName
+            aSubstanceYLabel?.text = state.yPercentageName
+            bSubstanceXLabel?.text = state.xPercentageName
+            bSubstanceYLabel?.text = state.yPercentageName
         }
     }
     
@@ -58,13 +86,11 @@ class StrainsViewController: DismissKeyboardViewController, StoryboardInitializa
         var bSubstanceXPercentage: String = ""
         var bSubstanceYPercentage: String = ""
         
-        var aSubstanceTitle: String = ""
-        var bSubstanceTitle: String = ""
+        var aSubstanceTitle: String? = nil
+        var bSubstanceTitle: String? = nil
         
-        var aSubstanceXPercentageName: String = ""
-        var aSubstanceYPercentageName: String = ""
-        var bSubstanceXPercentageName: String = ""
-        var bSubstanceYPercentageName: String = ""
+        var xPercentageName: String = ""
+        var yPercentageName: String = ""
     }
     
     override func viewDidLoad() {
@@ -74,10 +100,11 @@ class StrainsViewController: DismissKeyboardViewController, StoryboardInitializa
         aSubstanceYPercentageField.delegate = textFieldDelegate
         bSubstanceXPercentageField.delegate = textFieldDelegate
         bSubstanceYPercentageField.delegate = textFieldDelegate
+        
         // Do any additional setup after loading the view.
         
         //Admob
-        //MARK:= google Adwords
+        //MARK: - google Adwords
         #if RELEASE
         // Live AdMob Banner ID
         strainsBanner.adUnitID = "ca-app-pub-3940256099942544/6300978111"
@@ -112,12 +139,12 @@ class StrainsViewController: DismissKeyboardViewController, StoryboardInitializa
             aSubstanceYPercentage: aSubstanceYPercentageField?.text ?? "",
             bSubstanceXPercentage: bSubstanceXPercentageField?.text ?? "",
             bSubstanceYPercentage: bSubstanceYPercentageField?.text ?? "",
-            aSubstanceTitle: aSubstanceTitleLabel?.text ?? "",
-            bSubstanceTitle: bSubstanceTitleLabel?.text ?? "",
-            aSubstanceXPercentageName: aSubstanceXLabelField?.text ?? "",
-            aSubstanceYPercentageName: aSubstanceYLabelField?.text ?? "",
-            bSubstanceXPercentageName: bSubstanceXLabelField?.text ?? "",
-            bSubstanceYPercentageName: bSubstanceYLabelField?.text ?? ""
+            aSubstanceTitle: aSubstanceTitleField?.text ?? "",
+            bSubstanceTitle: bSubstanceTitleField?.text ?? "",
+            xPercentageName: aSubstanceXLabel?.text ?? "",
+            yPercentageName: aSubstanceYLabel?.text ?? "",
+            bSubstanceXPercentageName: bSubstanceXLabel?.text ?? "",
+            bSubstanceYPercentageName: bSubstanceYLabel?.text ?? ""
         )
         
         nextButton.isEnabled = shouldNextButtonBeEnabled()
