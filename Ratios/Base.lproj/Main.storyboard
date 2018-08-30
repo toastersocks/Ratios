@@ -135,8 +135,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q8g-3N-Iiy">
                                 <rect key="frame" x="21" y="194" width="333" height="116"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="A" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p6X-aS-Knp">
-                                        <rect key="frame" x="25" y="70" width="51" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="x" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p6X-aS-Knp">
+                                        <rect key="frame" x="25" y="69" width="51" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -171,7 +171,7 @@
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="rhK-nU-xDv"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="B" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gyw-Tw-YE7">
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="y" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gyw-Tw-YE7">
                                         <rect key="frame" x="147" y="69" width="51" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
@@ -345,13 +345,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="l7K-pC-n66"/>
                     <connections>
-                        <outlet property="desiredARatioField" destination="bCg-im-SwV" id="BOL-kv-Lon"/>
-                        <outlet property="desiredBRatioField" destination="KzS-Am-VTj" id="J9u-1f-ixf"/>
+                        <outlet property="desiredXRatioField" destination="bCg-im-SwV" id="BOL-kv-Lon"/>
+                        <outlet property="desiredYRatioField" destination="KzS-Am-VTj" id="J9u-1f-ixf"/>
                         <outlet property="gramsField" destination="RrU-Bb-ewh" id="kbz-SV-5xL"/>
                         <outlet property="nextButton" destination="14b-eY-yaa" id="Yce-Yn-Mhl"/>
                         <outlet property="ratioBanner" destination="Za4-yU-ycE" id="cKo-wv-ijH"/>
-                        <outlet property="substanceALabel" destination="p6X-aS-Knp" id="VuL-JX-Lz6"/>
-                        <outlet property="substanceBLabel" destination="Gyw-Tw-YE7" id="LK6-uK-K9Q"/>
+                        <outlet property="substanceXLabel" destination="p6X-aS-Knp" id="VuL-JX-Lz6"/>
+                        <outlet property="substanceYLabel" destination="Gyw-Tw-YE7" id="LK6-uK-K9Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -845,6 +845,6 @@ Use Ratios to help create test blends to find out which you prefer</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tYm-Tp-qSB"/>
+        <segue reference="mIn-Hr-vbk"/>
     </inferredMetricsTieBreakers>
 </document>

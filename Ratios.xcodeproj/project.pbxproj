@@ -17,6 +17,7 @@
 		DD13DBBD201D318200515F22 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD13DBBC201D318200515F22 /* Coordinator.swift */; };
 		DD13DBBF201D39F900515F22 /* UIViewController+StoryboardInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD13DBBE201D39F700515F22 /* UIViewController+StoryboardInit.swift */; };
 		DD13DBC1202285FE00515F22 /* RatiosAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD13DBC0202285FE00515F22 /* RatiosAlgorithm.swift */; };
+		DD58EB742137971600BE9E92 /* StateTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD58EB732137971600BE9E92 /* StateTransformer.swift */; };
 		DD645F422076DAB000AA830F /* DismissKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD645F412076DAB000AA830F /* DismissKeyboardViewController.swift */; };
 		DDA3433B207594A500C3C153 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA3433A207594A500C3C153 /* Helpers.swift */; };
 		DDB5B465201A7C62001F5F47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB5B464201A7C62001F5F47 /* AppDelegate.swift */; };
@@ -52,6 +53,7 @@
 		DD13DBBC201D318200515F22 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		DD13DBBE201D39F700515F22 /* UIViewController+StoryboardInit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardInit.swift"; sourceTree = "<group>"; };
 		DD13DBC0202285FE00515F22 /* RatiosAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatiosAlgorithm.swift; sourceTree = "<group>"; };
+		DD58EB732137971600BE9E92 /* StateTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTransformer.swift; sourceTree = "<group>"; };
 		DD645F412076DAB000AA830F /* DismissKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboardViewController.swift; sourceTree = "<group>"; };
 		DDA3433A207594A500C3C153 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		DDB5B461201A7C62001F5F47 /* Ratios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ratios.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +155,7 @@
 				DDB5B470201A7C62001F5F47 /* Info.plist */,
 				DDA3433A207594A500C3C153 /* Helpers.swift */,
 				DD13DBBC201D318200515F22 /* Coordinator.swift */,
+				DD58EB732137971600BE9E92 /* StateTransformer.swift */,
 				DD13DBC0202285FE00515F22 /* RatiosAlgorithm.swift */,
 				DDBDFA60202BAD0B009913A7 /* DecimalNumberValidator.swift */,
 				DD13DBB5201D30C300515F22 /* View */,
@@ -323,6 +326,7 @@
 				DD13DBBF201D39F900515F22 /* UIViewController+StoryboardInit.swift in Sources */,
 				DDA3433B207594A500C3C153 /* Helpers.swift in Sources */,
 				DD13DBB7201D312300515F22 /* StrainsViewController.swift in Sources */,
+				DD58EB742137971600BE9E92 /* StateTransformer.swift in Sources */,
 				DDBDFA61202BAD0C009913A7 /* DecimalNumberValidator.swift in Sources */,
 				DDB5B465201A7C62001F5F47 /* AppDelegate.swift in Sources */,
 				DD13DBB9201D314100515F22 /* ResultsViewController.swift in Sources */,

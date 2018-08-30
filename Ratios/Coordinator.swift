@@ -98,8 +98,8 @@ extension Coordinator: StrainsViewDelegate {
             let thcStrainCBDPercentage = Double(state.aSubstanceYPercentage),
             let cbdStrainTHCPercentage = Double(state.bSubstanceXPercentage),
             let cbdStrainCBDPercentage = Double(state.bSubstanceYPercentage),
-            let desiredTHCFactor = Double(ratioState.aRatio),
-            let desiredCBDFactor = Double(ratioState.bRatio)
+            let desiredTHCFactor = Double(ratioState.xRatio),
+            let desiredCBDFactor = Double(ratioState.yRatio)
             else { fatalError("Invalid input not handled") }
         
         let thcStrain = Strain(thc: thcStrainTHCPercentage, cbd: thcStrainCBDPercentage)
@@ -120,7 +120,7 @@ extension Coordinator: StrainsViewDelegate {
             var forMessage: String
             
             forMessage = """
-            \(ratioState.aRatio):\(ratioState.bRatio) thc to cbd
+            \(ratioState.xRatio):\(ratioState.yRatio) thc to cbd
             \(String(format: "%.2f", cannabinoidPercentages.thc))% thc \(String(format: "%.2f", cannabinoidPercentages.cbd))% cbd
             """
             
