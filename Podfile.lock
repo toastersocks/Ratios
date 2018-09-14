@@ -1,16 +1,20 @@
 PODS:
-  - Google-Mobile-Ads-SDK (7.29.0)
+  - Google-Mobile-Ads-SDK (7.32.0)
+  - SwiftCheck (0.10.0)
 
 DEPENDENCIES:
   - Google-Mobile-Ads-SDK
+  - SwiftCheck
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - Google-Mobile-Ads-SDK
+    - SwiftCheck
 
 SPEC CHECKSUMS:
-  Google-Mobile-Ads-SDK: 375bbb821b3df2106c37b74f6b0a97576ddc5f6b
+  Google-Mobile-Ads-SDK: 2aca87e46e860f1e1fc0fdc1201dd9caa4be9ba6
+  SwiftCheck: 8a3c3638941467bc142d625f374a8409dd262ae8
 
-PODFILE CHECKSUM: ec69dd61a4043f84584688c349d40cf53c9f6fa9
+PODFILE CHECKSUM: 174b00b4a4e51a7bc7fc35b35518100146f8e520
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.2

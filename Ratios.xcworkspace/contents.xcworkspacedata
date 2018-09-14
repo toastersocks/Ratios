@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:RatiosAlg.playground">
-   </FileRef>
-   <FileRef
       location = "group:Ratios.xcodeproj">
    </FileRef>
    <FileRef

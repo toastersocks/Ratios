@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1DAEB32762BDCBA0EDFB0ECC /* Pods_Ratios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F05D3C5BFE21A541CCD3D9D4 /* Pods_Ratios.framework */; };
 		2684E05C7FF0C2399AEBB33A /* Pods_RatiosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 676E19D1D3B1C1A75DAE088F /* Pods_RatiosTests.framework */; };
-		D0FC0794208AD95F006C1A70 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0FC0793208AD95F006C1A70 /* MapKit.framework */; };
 		DD13DBB4201D30B400515F22 /* RatioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD13DBB3201D30B400515F22 /* RatioViewController.swift */; };
 		DD13DBB7201D312300515F22 /* StrainsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD13DBB6201D312300515F22 /* StrainsViewController.swift */; };
 		DD13DBB9201D314100515F22 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD13DBB8201D314100515F22 /* ResultsViewController.swift */; };
@@ -19,6 +18,7 @@
 		DD13DBC1202285FE00515F22 /* RatiosAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD13DBC0202285FE00515F22 /* RatiosAlgorithm.swift */; };
 		DD58EB742137971600BE9E92 /* StateTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD58EB732137971600BE9E92 /* StateTransformer.swift */; };
 		DD645F422076DAB000AA830F /* DismissKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD645F412076DAB000AA830F /* DismissKeyboardViewController.swift */; };
+		DD7BDC94214323CC001B4A2F /* RatiosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7BDC93214323CC001B4A2F /* RatiosUITests.swift */; };
 		DDA3433B207594A500C3C153 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA3433A207594A500C3C153 /* Helpers.swift */; };
 		DDB5B465201A7C62001F5F47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB5B464201A7C62001F5F47 /* AppDelegate.swift */; };
 		DDB5B46A201A7C62001F5F47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB5B468201A7C62001F5F47 /* Main.storyboard */; };
@@ -29,6 +29,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		DD7BDC96214323CC001B4A2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDB5B459201A7C62001F5F47 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DDB5B460201A7C62001F5F47;
+			remoteInfo = Ratios;
+		};
 		DDB5B476201A7C62001F5F47 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DDB5B459201A7C62001F5F47 /* Project object */;
@@ -55,6 +62,9 @@
 		DD13DBC0202285FE00515F22 /* RatiosAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatiosAlgorithm.swift; sourceTree = "<group>"; };
 		DD58EB732137971600BE9E92 /* StateTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTransformer.swift; sourceTree = "<group>"; };
 		DD645F412076DAB000AA830F /* DismissKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboardViewController.swift; sourceTree = "<group>"; };
+		DD7BDC91214323CC001B4A2F /* RatiosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RatiosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD7BDC93214323CC001B4A2F /* RatiosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatiosUITests.swift; sourceTree = "<group>"; };
+		DD7BDC95214323CC001B4A2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDA3433A207594A500C3C153 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		DDB5B461201A7C62001F5F47 /* Ratios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ratios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB5B464201A7C62001F5F47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,11 +80,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DD7BDC8E214323CC001B4A2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DDB5B45E201A7C62001F5F47 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0FC0794208AD95F006C1A70 /* MapKit.framework in Frameworks */,
 				1DAEB32762BDCBA0EDFB0ECC /* Pods_Ratios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,11 +140,21 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		DD7BDC92214323CC001B4A2F /* RatiosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DD7BDC93214323CC001B4A2F /* RatiosUITests.swift */,
+				DD7BDC95214323CC001B4A2F /* Info.plist */,
+			);
+			path = RatiosUITests;
+			sourceTree = "<group>";
+		};
 		DDB5B458201A7C62001F5F47 = {
 			isa = PBXGroup;
 			children = (
 				DDB5B463201A7C62001F5F47 /* Ratios */,
 				DDB5B478201A7C62001F5F47 /* RatiosTests */,
+				DD7BDC92214323CC001B4A2F /* RatiosUITests */,
 				DDB5B462201A7C62001F5F47 /* Products */,
 				04A064706576F0F67FE9515B /* Pods */,
 				410D01FC6372865FFC7C6328 /* Frameworks */,
@@ -140,6 +166,7 @@
 			children = (
 				DDB5B461201A7C62001F5F47 /* Ratios.app */,
 				DDB5B475201A7C62001F5F47 /* RatiosTests.xctest */,
+				DD7BDC91214323CC001B4A2F /* RatiosUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -175,6 +202,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		DD7BDC90214323CC001B4A2F /* RatiosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD7BDC98214323CC001B4A2F /* Build configuration list for PBXNativeTarget "RatiosUITests" */;
+			buildPhases = (
+				DD7BDC8D214323CC001B4A2F /* Sources */,
+				DD7BDC8E214323CC001B4A2F /* Frameworks */,
+				DD7BDC8F214323CC001B4A2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD7BDC97214323CC001B4A2F /* PBXTargetDependency */,
+			);
+			name = RatiosUITests;
+			productName = RatiosUITests;
+			productReference = DD7BDC91214323CC001B4A2F /* RatiosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		DDB5B460201A7C62001F5F47 /* Ratios */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DDB5B47E201A7C62001F5F47 /* Build configuration list for PBXNativeTarget "Ratios" */;
@@ -201,6 +246,7 @@
 				DDB5B471201A7C62001F5F47 /* Sources */,
 				DDB5B472201A7C62001F5F47 /* Frameworks */,
 				DDB5B473201A7C62001F5F47 /* Resources */,
+				B654292CF3974FF0D36B95EB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -218,10 +264,15 @@
 		DDB5B459201A7C62001F5F47 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "James Pamplona";
 				TargetAttributes = {
+					DD7BDC90214323CC001B4A2F = {
+						CreatedOnToolsVersion = 10.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DDB5B460201A7C62001F5F47;
+					};
 					DDB5B460201A7C62001F5F47 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -253,11 +304,19 @@
 			targets = (
 				DDB5B460201A7C62001F5F47 /* Ratios */,
 				DDB5B474201A7C62001F5F47 /* RatiosTests */,
+				DD7BDC90214323CC001B4A2F /* RatiosUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DD7BDC8F214323CC001B4A2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DDB5B45F201A7C62001F5F47 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -314,9 +373,35 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B654292CF3974FF0D36B95EB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RatiosTests/Pods-RatiosTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftCheck/SwiftCheck.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftCheck.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RatiosTests/Pods-RatiosTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DD7BDC8D214323CC001B4A2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD7BDC94214323CC001B4A2F /* RatiosUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DDB5B45D201A7C62001F5F47 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -347,6 +432,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		DD7BDC97214323CC001B4A2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DDB5B460201A7C62001F5F47 /* Ratios */;
+			targetProxy = DD7BDC96214323CC001B4A2F /* PBXContainerItemProxy */;
+		};
 		DDB5B477201A7C62001F5F47 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DDB5B460201A7C62001F5F47 /* Ratios */;
@@ -374,6 +464,45 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		DD7BDC99214323CC001B4A2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NQ5FBJE8P8;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = RatiosUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.toastersocks.RatiosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Ratios;
+			};
+			name = Debug;
+		};
+		DD7BDC9A214323CC001B4A2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NQ5FBJE8P8;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = RatiosUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.toastersocks.RatiosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Ratios;
+			};
+			name = Release;
+		};
 		DDB5B47C201A7C62001F5F47 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -424,7 +553,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -477,7 +606,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -493,7 +622,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NQ5FBJE8P8;
 				INFOPLIST_FILE = Ratios/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.toastersocks.ratios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -510,7 +639,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NQ5FBJE8P8;
 				INFOPLIST_FILE = Ratios/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.toastersocks.ratios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -524,10 +653,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4959F3717CE906FD969FE63D /* Pods-RatiosTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NQ5FBJE8P8;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = RatiosTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.toastersocks.RatiosTests;
@@ -542,10 +672,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 48959ECE7952FB10031CBEBD /* Pods-RatiosTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NQ5FBJE8P8;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = RatiosTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.toastersocks.RatiosTests;
@@ -559,6 +690,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DD7BDC98214323CC001B4A2F /* Build configuration list for PBXNativeTarget "RatiosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD7BDC99214323CC001B4A2F /* Debug */,
+				DD7BDC9A214323CC001B4A2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DDB5B45C201A7C62001F5F47 /* Build configuration list for PBXProject "Ratios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

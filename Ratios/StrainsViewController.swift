@@ -101,6 +101,8 @@ class StrainsViewController: DismissKeyboardViewController, StoryboardInitializa
         bSubstanceXPercentageField.delegate = textFieldDelegate
         bSubstanceYPercentageField.delegate = textFieldDelegate
         
+        let localState = state
+        state = localState
         // Do any additional setup after loading the view.
         
         //Admob
@@ -142,9 +144,9 @@ class StrainsViewController: DismissKeyboardViewController, StoryboardInitializa
             aSubstanceTitle: aSubstanceTitleField?.text ?? "",
             bSubstanceTitle: bSubstanceTitleField?.text ?? "",
             xPercentageName: aSubstanceXLabel?.text ?? "",
-            yPercentageName: aSubstanceYLabel?.text ?? "",
-            bSubstanceXPercentageName: bSubstanceXLabel?.text ?? "",
-            bSubstanceYPercentageName: bSubstanceYLabel?.text ?? ""
+            yPercentageName: aSubstanceYLabel?.text ?? ""
+//            bSubstanceXPercentageName: bSubstanceXLabel?.text ?? "",
+//            bSubstanceYPercentageName: bSubstanceYLabel?.text ?? ""
         )
         
         nextButton.isEnabled = shouldNextButtonBeEnabled()

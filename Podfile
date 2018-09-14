@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
- platform :ios, '9.3'
+ platform :ios, '10.0'
 
 target 'Ratios' do
   use_frameworks!
@@ -10,6 +10,7 @@ target 'Ratios' do
   target 'RatiosTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'SwiftCheck'
   end
 
 end

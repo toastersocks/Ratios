@@ -25,11 +25,18 @@ class RatiosTests: XCTestCase {
         XCTAssertEqual("The number is 123.56".formatDecimalNumbersForAccessibility(), "The number is 123 point 56")
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testStateTransformerRatioToStrainsTransformation() {
+        let ratioState = RatioViewController.State(xRatio: "1",
+                                                   yRatio: "1",
+                                                   xLabel: "XLabel",
+                                                   yLabel: "YLabel",
+                                                   grams: nil)
+        var stateTransformer = StateTransformer(currentState: .ratio(state: ratioState))
+        let substanceState = stateTransformer.next(with: ratioState)
+        print("substanceState.xPercentageName: \(substanceState.xPercentageName)")
+        print("ratioState.xLabel: \(ratioState.xLabel)")
+        XCTAssertEqual(substanceState.xPercentageName, ratioState.xLabel, "The xPercentageName of a substanceState should be equal to the xLabel of the ratioState it was derived from")
+        XCTAssertEqual(substanceState.yPercentageName, ratioState.yLabel, "The yPercentageName of a substanceState should be equal to the yLabel of the ratioState it was derived from")
     }
     
 }
