@@ -13,16 +13,24 @@ struct StateTransformer {
 //    private var ratioState: RatioViewController.State = RatioViewController.State()
     private var ratioState: RatioViewController.State {
         switch currentState {
-        case .ratio(state: let ratioState):
-            return ratioState
-        case .strain(state: _, let ratioState):
-            return ratioState
-        case .result(state: _, _, let ratioState):
-            return ratioState
+        case .ratio(state: let state),
+             .strain(state: _, let state),
+             .result(state: _, _, let state):
+            return state
+        }
+    }
+    
+    private var substanceState: StrainsViewController.State {
+        switch currentState {
+        case .strain(state: let state, _), .result(state: _, let state, _):
+            return state
+        case .ratio(state: _):
+            return StrainsViewController.State()
         }
     }
     
     mutating func next(with state: RatioViewController.State) -> StrainsViewController.State {
+        currentState = .ratio(state: state)
         var nextState = StrainsViewController.State()
         nextState.xPercentageName = state.xLabel
         nextState.yPercentageName = state.yLabel
@@ -31,7 +39,8 @@ struct StateTransformer {
         return strainsState
     }
     
-    func next(with state: StrainsViewController.State) throws -> ResultsViewController.State {
+    mutating func next(with state: StrainsViewController.State) throws -> ResultsViewController.State {
+        currentState = .strain(state: state, ratioState)
         guard let thcStrainTHCPercentage = Double(state.aSubstanceXPercentage),
             let thcStrainCBDPercentage = Double(state.aSubstanceYPercentage),
             let cbdStrainTHCPercentage = Double(state.bSubstanceXPercentage),
@@ -58,15 +67,15 @@ struct StateTransformer {
             var forMessage: String
             
             forMessage = """
-            \(ratioState.xRatio):\(ratioState.yRatio) thc to cbd
-            \(String(format: "%.2f", cannabinoidPercentages.thc))% thc \(String(format: "%.2f", cannabinoidPercentages.cbd))% cbd
+            \(ratioState.xRatio):\(ratioState.yRatio) \(ratioState.xLabel) to \(ratioState.yLabel)
+            \(String(format: "%.2f", cannabinoidPercentages.thc))% \(ratioState.xLabel) \(String(format: "%.2f", cannabinoidPercentages.cbd))% \(ratioState.yLabel)
             """
             
             let mixMessage: String
             if ratioState.grams == nil || ratioState.grams!.isEmpty {
                 mixMessage = """
-                \(finalMix.numerator) parts of high thc strain
-                \(finalMix.denominator) parts of high cbd strain
+                \(finalMix.numerator) parts of \(substanceState.aSubstanceTitle ?? "A")
+                \(finalMix.denominator) parts of \(substanceState.bSubstanceTitle ?? "B")
                 """
             } else {
                 guard let totalGramsString = ratioState.grams,
@@ -80,8 +89,8 @@ struct StateTransformer {
                 forMessage = "\(totalGramsString) grams of " + forMessage
                 
                 mixMessage = """
-                \(String(format: "%.2f", thcGrams)) grams of thc strain
-                \(String(format: "%.2f", cbdGrams)) grams of cbd strain
+                \(String(format: "%.2f", thcGrams)) grams of \(substanceState.aSubstanceTitle ?? "A")
+                \(String(format: "%.2f", cbdGrams)) grams of \(substanceState.bSubstanceTitle ?? "B")
                 """
             }
             
